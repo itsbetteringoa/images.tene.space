@@ -1,0 +1,1 @@
+Teller og viser antall nedlastinger for hvert bilde

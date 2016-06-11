@@ -1,0 +1,1 @@
+Anvender onlinetjensten Akismet til at kontrollere kommentarer for spam.

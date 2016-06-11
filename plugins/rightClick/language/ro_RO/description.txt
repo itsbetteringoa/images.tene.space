@@ -1,0 +1,1 @@
+rightClick dezactivează meniul de click dreapta pe fotografiile de dimensiune web. Utilizatorii cu privilegii de "Administrator" își păstrează meniul de click dreapta. rightClick nu este o soluție absolut sigură împotriva copierii imaginilor.

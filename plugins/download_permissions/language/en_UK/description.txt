@@ -1,0 +1,1 @@
+Permit photo download, filtered by album.

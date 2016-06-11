@@ -1,0 +1,1 @@
+Ajoute un lien "Plus téléchargés" dans le menu "Spéciales" 'le plugin download counter doit être activé.

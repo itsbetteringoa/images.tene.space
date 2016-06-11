@@ -1,0 +1,1 @@
+rightClick desativa o menu do botão direito do mouse na foto em tamanho web. Usuários com nível "Admin" mantém esse menu disponível. Por favor, tenha em mente que rightClick não é uma solução completa de segurança contra cópias de imagens.

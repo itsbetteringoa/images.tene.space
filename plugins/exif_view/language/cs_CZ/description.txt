@@ -1,0 +1,1 @@
+Konvertuje EXIF data na pro cloveka srozumitelné hodnoty. Odpovídá specifikaci EXIF 2.2, detaily na http://www.exif.org. Jednoduše rozširitelné.

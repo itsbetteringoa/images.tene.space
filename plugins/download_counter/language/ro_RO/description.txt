@@ -1,0 +1,1 @@
+Numără și afișeaza numărul de descărcări pentru fiecare fotografie

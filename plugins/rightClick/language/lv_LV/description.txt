@@ -1,0 +1,1 @@
+labaisKlikšķis (rightClick) deaktivē labā klikšķa izvēlni uz web izmēra foto. Lietotājiem ar  "Administratora" piekļuves tiesībām ir rightClick (labā klikšķa) privilēģijas. Lūdzu ņemiet vērā, ka rightClick risinājums pilnībā nepasargā no attēlu nokopēšanas.

@@ -1,0 +1,1 @@
+Add a "Most Downloaded" link in "Specials" menu. (Plugin download counter must be activate)

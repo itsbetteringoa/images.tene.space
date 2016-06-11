@@ -1,0 +1,1 @@
+rightClick deactivates the right click menu on the web size photo. Users with "Admins" privacy level keep the right-click available. Please, keep in mind that rightClick is not a full secured solution against image copy.

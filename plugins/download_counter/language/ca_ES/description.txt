@@ -1,0 +1,1 @@
+Compta i mostra el número de baixades de cada foto

@@ -1,0 +1,5 @@
+RightClick deshabilita el menú contextual de imágenes de tamaño web y otros.
+Las páginas, akBookStyle, Lightbox y HD Shadowbox están protegidas por defecto.
+Igualmente predeterminado, el webmaster y los administradores conservan el uso del botón derecho del ratón.
+
+Gracias por tener en cuenta que RightClick no es un seguridad total contra las copias de imagenes.

@@ -1,0 +1,1 @@
+Contar e exibir o número de vezes que cada foto foi baixada.

@@ -1,0 +1,16 @@
+.btn-sharethis a       { margin-left: 0.5em; }
+.btn-sharethis a span  { display: none; }
+#tab-sharethis         { padding-top: 10px; }
+#tab-sharethis a       { margin-right: 1em; }
+#tab-sharethis > span  { display: block; font-size: 120%; font-weight: bold; }
+
+.fa-facebook-square    { color: #5072be; }
+.fa-pinterest          { color: #ee5a5a; }
+.fa-twitter            { color: #3cd4eb; }
+.fa-google-plus-square { color: #ee5a5a; }
+
+#static-sharethis        { float: right; display: inline-block; padding-top: 4px; }
+#static-sharethis a      { margin-left: 0.5em; }
+#static-sharethis a span { display: none; }
+
+#static-sharethis.imageInfoTable { float: none; display: table; }

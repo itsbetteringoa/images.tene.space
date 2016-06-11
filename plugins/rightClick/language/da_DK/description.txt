@@ -1,0 +1,1 @@
+rightClick deaktiverer højreklikmenuen på et fotografis webside.  Brugere med privatlivsniveauet "Admins" beholder højreklikket. Bemærk at rightClick ikke er en fuldstænding sikring mod kopiering af billeder.

@@ -1,0 +1,1 @@
+Permesso download foto, filtrato per album.

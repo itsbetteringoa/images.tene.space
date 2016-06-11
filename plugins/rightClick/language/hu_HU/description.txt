@@ -1,0 +1,1 @@
+A rightClick bővítmény letiltja a jobb egérgomb használatát a web méretű képeknél. Az "Admin" jogosultsági szinttel rendelkező felhasználók esetében aktív a jobb gomb. Kérjük tartsa szem előtt, hogy a rightClick használata nem teljes értékű megoldás a védett képek lopása ellen.

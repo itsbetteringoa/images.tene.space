@@ -1,0 +1,70 @@
+.banner-radio {
+  display:inline-block;
+  margin:5px 0 0 20px;
+}
+  .banner-radio .actions {
+    display:inline-block;
+    padding-top:30px;
+    vertical-align:top;
+  }
+  .banner-wrapper {
+    display:inline-block;
+    position:relative;
+    width:230px;
+    height:70px;
+  }
+    .delete-banner, .banner-size {
+      position:absolute;
+      display:block;
+      top:0;
+      right:0;
+      margin:0;
+      width:16px;
+      height:16px;
+      background:rgba(20,20,20,0.5);
+      color:#eee;
+      border:1px solid #999;
+      border-top:none;
+      border-right:none;
+      border-radius:0 0 0 4px;
+      font-weight:bold;
+      text-align:center;
+    }
+      .delete-banner:hover {
+        color:#e00 !important;
+        border-color:#e00;
+        background:rgb(20,20,20);
+      }
+    .banner-size {
+      top:auto;
+      bottom:0;
+      width:auto;
+      height:auto;
+      padding:2px;
+      background:rgba(20,20,20,0.6);
+      border:1px solid #999;
+      border-bottom:none;
+      border-right:none;
+      border-radius:4px 0 0 0;
+      font-weight:normal;
+      font-size:10px;
+      line-height:10px;
+    }
+
+#album_banners {
+  list-style:disc;
+  margin:10px 0 0 25px;
+}
+  #album_banners li {
+    margin-bottom:0;
+  }
+  #album_banners img {
+    vertical-align:middle;
+  }
+  
+.jcrop-holder.fixed-ratio .ord-s,
+.jcrop-holder.fixed-ratio .ord-n,
+.jcrop-holder.fixed-ratio .ord-e,
+.jcrop-holder.fixed-ratio .ord-w {
+  display:none;
+}

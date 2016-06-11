@@ -1,0 +1,1 @@
+Šteje in prikazuje število prenosov za vsako fotografijo.

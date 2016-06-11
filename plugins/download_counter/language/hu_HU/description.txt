@@ -1,0 +1,1 @@
+Számon tartja és megjeleníti, hogy az egyes képeket hány alkalommal töltötték le.

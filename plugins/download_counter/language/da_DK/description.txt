@@ -1,0 +1,1 @@
+Tæl og vis det antal gange, hvert fotografi er blevet downloadet.

@@ -1,0 +1,1 @@
+(Exif) Es una especificació per a formats d'arxius d'imatges utilitzada per les càmeres digitals als quals s'agreguen etiquetes específiques de metadades.

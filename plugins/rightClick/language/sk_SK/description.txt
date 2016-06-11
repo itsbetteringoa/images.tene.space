@@ -1,0 +1,1 @@
+rightClick zablokuje pravé klikacie menu (tlačidlo myši) na stránke fotky. Používateľ s "Administrátorským" oprávnením ju má aktivovanú stále. Prosím, vezmite na vedomie, že rightClick nie je stopercentné bezpečnostné riešenie proti kopírovaniu fotografií a je ho možné prekonať. Použite ďalšie techniky ako vodoznak alebo nižšiu kvalitu fotiek ako je originál.

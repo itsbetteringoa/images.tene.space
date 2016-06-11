@@ -1,0 +1,1 @@
+Desativa o menu do bot&atilde;o direito no tamanho da foto. Os ustilizadores com n&iacute;vel de privacidade "Admins" manter&atilde;o disponivel a op&ccedil;&atilde;o do m&eacute;nu resultante do clicar com o bot&atilde;o direito. Por favor, tenha em mente que "rightClick" n&atilde;o &eacute; uma solu&ccedil;&atilde;o completamente segura contra c&oacute;pia das fotos.

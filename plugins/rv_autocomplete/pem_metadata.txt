@@ -1,0 +1,4 @@
+File automatically created from SVN or Git repository.
+
+URL: https://github.com/modus75/piwigo-autocomplete 
+Revision: 25dcc3d6813f2b397cfa32d7b3c4c25551d81720 (Thu Mar 12 20:34:18 2015 +0100)

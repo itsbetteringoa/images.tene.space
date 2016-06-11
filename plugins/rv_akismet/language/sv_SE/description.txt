@@ -1,0 +1,1 @@
+Använder Akismet online tjänst för att filtrera bort spam-kommentarer

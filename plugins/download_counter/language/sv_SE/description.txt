@@ -1,0 +1,1 @@
+Räkna och visa antal nedladdningar för varje foto

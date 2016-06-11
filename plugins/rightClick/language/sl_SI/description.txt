@@ -1,0 +1,1 @@
+rightClick onemogoči uporabo desnega miškinega klika. Uporabniki z administrativnimi pravicami lahko še naprej uporabljajo desni miškin klik. Prosim, imejte v mislih, da rightClick ni popolna rešitev pred neželenim kopiranjem slik.

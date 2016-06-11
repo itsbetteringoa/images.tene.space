@@ -1,0 +1,4 @@
+File automatically created from SVN or Git repository.
+
+URL: https://github.com/plegall/Piwigo-download_counter 
+Revision: 7c00d1884f156f186dbdee3e07ed7354448d733b (Sat Dec 26 08:32:12 2015 +0100)

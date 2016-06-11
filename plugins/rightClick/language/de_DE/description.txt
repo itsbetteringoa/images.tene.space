@@ -1,0 +1,12 @@
+rightClick deaktiviert das Kontextmenü auf den Web-skalierten Bilder und
+vieles mehr.
+Die Bilderseite, akBookStyle, Lightbox und HD Shadowbox sind standardmäßig
+geschützt.
+(Andere gültige jQuery Selektoren können zur Standard-Liste hinzugefügt
+werden.)
+Standardmäßig behalten Benutzer der Sicherheitsstufe "Administrator" das
+Recht, den Rechtsklick zu benutzen.
+
+An dieser Stelle möchten wir sie noch darauf aufmerksam machen, dass das
+Plug-in rightClick keine vollständige Lösung gegen das Kopieren der Bilder
+ist.

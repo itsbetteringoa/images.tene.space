@@ -1,0 +1,1 @@
+Count and display number of downloads for each photo

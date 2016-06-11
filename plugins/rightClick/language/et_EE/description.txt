@@ -1,0 +1,1 @@
+rightClick deaktiveerib parema hiirekliki menüü veebi suurustel piltidel. Kasutajad "Administraator" õigustega säilitavad parema hiireklõpsu menüü õiguse. RightClick lisa ei ole täielikult turvatud lahendus piltide kopeerimise vastu. 

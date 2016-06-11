@@ -1,0 +1,1 @@
+Tel het aantal downloads van elke afbeelding en geef het aantal weer op het scherm

@@ -1,0 +1,1 @@
+rightClick (sağTık) resimlerinize sağ tıkladığınızda açılan menüyü pasif hale getiren bir eklentidir. "Yönetici" haklarına sahip kullanıcılar sağ tık menüsüne erişebilir. Ancak unutulmaması gereken rightClick resim kopyalanmasını engelleyen kesin bir çözüm değildir.

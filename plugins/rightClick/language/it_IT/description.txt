@@ -1,0 +1,5 @@
+rightClick disabilita il menu contestuale sulle immagini formato web e altro ancora.
+La pagina Picture, akBookStyle, Lightbox e HD Shadowbox sono automaticamente protetti.
+Di nuovo di default, il webmaster e gli amministratori sono esclusi da queste impostazioni (click destro abilitato).
+
+Tenete presente che rightClick non è una protezzione totale contro la copia delle immagini.

@@ -1,0 +1,1 @@
+Tilføjer menupunktet "Kontakt" i menublokken, som giver brugerne mulighed for at kontakte webmastere og administratorer.

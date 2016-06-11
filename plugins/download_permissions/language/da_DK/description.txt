@@ -1,0 +1,1 @@
+Tillad fotodownload, filteret pr. album.

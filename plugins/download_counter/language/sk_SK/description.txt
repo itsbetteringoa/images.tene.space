@@ -1,0 +1,1 @@
+Spočítavanie a zobrazenie počtu nahratí každej fotky

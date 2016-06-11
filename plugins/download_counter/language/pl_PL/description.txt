@@ -1,0 +1,1 @@
+Zlicza i wyświetla liczbę pobrań każdego zdjęcia.

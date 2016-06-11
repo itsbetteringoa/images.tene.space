@@ -1,0 +1,1 @@
+Tillåt nedladdning av foton, filtrerat per album.

@@ -1,0 +1,98 @@
+/* from http://www.zurb.com/playground/css3-polaroids thx ! */
+.content {
+	display:block;
+	position: relative;
+	z-index: 1;
+}
+ul.polaroid {
+	list-style: none;
+	overflow: hidden;
+	width: 100%;
+	padding-top: 20px;
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: 0;
+	margin: 0px;
+}
+ul.polaroid li {
+	display: inline;
+}
+ul.polaroid a {
+	-moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+	-moz-transform: rotate(-2deg);
+	-webkit-transition: -webkit-transform .15s linear;
+	-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+	-webkit-transform: rotate(-2deg);
+	-o-transition: -webkit-transform .15s linear;
+	-o-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+	-o-transform:rotate(-2deg);
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+	text-shadow: 0 1px 1px #CCC;
+	background: none repeat scroll 0 0 #FFFFFF;
+	color: #333333;
+	display: inline;
+	float: left;
+	font-family: "Marker Felt", sans-serif;
+	font-size: 18px;
+	margin: 0 0 27px 30px;
+	padding: 10px 10px 15px;
+	text-align: center;
+	text-decoration: none;
+	width: auto;
+	overflow:hidden;
+	border:none;
+}
+ul.polaroid img {
+	display: block;
+	margin-bottom: 12px;
+}
+ul.polaroid a:after {
+	content: attr(title);
+}
+ul.polaroid li:nth-child(2n) a {
+	-moz-transform: rotate(2deg);
+	-webkit-transform: rotate(2deg);
+	-o-transform:rotate(2deg);
+}
+ul.polaroid li:nth-child(3n) a {
+	-moz-transform: none;
+	-webkit-transform: none;
+	-o-transform:none;
+	position: relative;
+	top: -5px;
+}
+ul.polaroid li:nth-child(5n) a {
+	-moz-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+	-o-transform: rotate(5deg);
+	position: relative;
+	right: 5px;
+}
+ul.polaroid li:nth-child(8n) a {
+	position: relative;
+	right: 5px;
+	top: 8px;
+}
+ul.polaroid li:nth-child(11n) a {
+	left: -5px;
+	position: relative;
+	top: 3px;
+}
+ul.polaroid li.messy a {
+	-moz-transform: rotate(-5deg);
+	-webkit-transform: rotate(-5deg);
+	-o-transform: rotate(-5deg);
+	margin-left: 160px;
+	margin-top: -375px;
+}
+ul.polaroid li a:hover, ul.polaroid li a.animate {
+	box-shadow: 6px 6px 8px  rgba(0, 0, 0, 0.85);
+	-moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.5);
+	-moz-transform: scale(1.25);
+	-webkit-transform: scale(1.25);
+	-o-transform:  scale(1.25);
+	position: relative;
+	z-index: 5;
+	border:none;
+}

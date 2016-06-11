@@ -1,0 +1,1 @@
+rightClick deaktivuje zakáže pravé klikací menu (myši) na stránce fotky. Uživatel s "Administrátorským" oprávněním jej má aktivován stále. Prosím, vezměte na vědomí, že rightClick není stoprocetní bezpečnostní řešení proti kopírování fotografíí a lze jej překonat.Použijte další techniky jako vodotisk nebo nižší kvalitu fotek než je originál.

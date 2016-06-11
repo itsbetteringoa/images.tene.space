@@ -1,0 +1,27 @@
+// Some of the styles used by plugins are inconsistent, this css is loaded last and resolves common known issues
+@import (reference) "theme.less";
+
+// Add glyphicon styles to any custom menu buttons
+.pwg-icon {
+  .glyphicon;
+}
+.pwg-button-text {
+  .glyphicon-text;
+}
+
+// Hide language switch as it doesn't work properly
+#languageSwitch {
+  display: none;
+}
+
+// Fix left padding for GDThumb/GThumb+ in Chrome
+ul.thumbnailCategories, ul.thumbnails, ul#thumbnails {
+  -webkit-padding-start: 0px;
+}
+
+// Fix loader that doesn't disappear for GDThumb
+#content {
+  div.loader {
+    display: none;
+  }
+}

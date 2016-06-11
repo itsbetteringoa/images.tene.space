@@ -1,0 +1,1 @@
+Skaičiuoja ir parodo kiekvienos nuotraukos parsisiuntimus

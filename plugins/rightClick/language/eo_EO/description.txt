@@ -1,0 +1,1 @@
+"rightClick" malaktiviĝas la dekstre-klakan menuon ĉe la foto retgranda. Uzantoj kun privateca nivelo de administrantoj gardas la eblecon de dekstre-klaki. Bonvolu memoradi, ke "rightClick" ne estas tute sekurigita solvo kontraŭ la kopio de bildoj.

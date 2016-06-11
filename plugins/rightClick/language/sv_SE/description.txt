@@ -1,0 +1,2 @@
+rightClick avaktiverar högerklicksmenyn på bildstorleken web size för alla utom administratörer.
+Tänk på att rightClick ändå inte helt skyddar mot bildkopiering.

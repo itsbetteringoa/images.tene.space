@@ -1,0 +1,1 @@
+rightClick schakelt het rechtermuisknop-menu uit bij de foto's op webgrootte. Gebruikers met het "beheerder" privacy-niveau kunnen nog wel hun rechtermuisknop gebruiken. Houd er a.u.b. rekening mee dat rightClick geen absolute beveiliging tegen het kopiëren van afbeeldingen is.

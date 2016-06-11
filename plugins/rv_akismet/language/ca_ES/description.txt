@@ -1,0 +1,1 @@
+Aquest complement comprova si els comentaris dels usuaris són spam a través del servei en línia d'Akismet.

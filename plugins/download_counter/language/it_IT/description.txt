@@ -1,0 +1,1 @@
+Contare e visualizzare il numero di download per ogni foto

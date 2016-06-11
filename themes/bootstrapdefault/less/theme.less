@@ -1,0 +1,389 @@
+@import (reference) "../bootstrap/less/bootstrap.less";
+@import (reference) "../selectize.js/src/less/selectize.bootstrap3.less";
+
+div#the_page {
+  position: relative;
+  overflow-x: hidden;
+}
+
+#quickconnect {
+  .form-control {
+    margin-bottom: 10px;
+  }
+}
+
+// Hide drop down menu forms
+.navbar-form-desktop {
+  display: none;
+}
+
+// Remove the bottom margin from the first navbar
+.navbar-main {
+  margin-bottom: 0px;
+}
+
+.navbar {
+  .navbar-right {
+    margin-right: 0;
+  }
+}
+
+// Make Jumbotron h1 a bit smaller and remove the bottom margin
+.jumbotron {
+  margin-bottom: 0px;
+  @media screen and (min-width: @screen-sm-min) {
+    h1,
+    .h1 {
+      font-size: (@font-size-base * 3.5);
+    }
+  }
+}
+
+// Hide text next to an icon
+.glyphicon-text {
+  display: none;
+}
+
+// This class should be use on the container when using the {html_options} smarty function
+.html-options {
+  select {
+    .form-control;
+  }
+}
+
+// This class should be use on the container for inline display when using the {html_radios} smarty function
+.html-radios-inline {
+  label {
+    .radio-inline;
+  }
+  label + label {
+    &:extend(.radio-inline + .radio-inline);
+  }
+  input[type=radio] {
+    &:extend(.radio-inline input[type=radio]);
+  }
+}
+.form-horizontal .html-radios-inline {
+  padding-top: 6px;
+}
+
+// Grid and list view styles
+#content {
+  .col-outer {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .col-inner {
+    .col-thumbnail {
+      .placeholder {
+        width: 260px;
+        height: 180px;
+      }
+    }
+  }
+}
+.content-grid {
+  .col-outer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .col-inner {
+    .col-thumbnail {
+      float: none;
+      margin-right: 0px;
+    }
+    .caption {
+      h3.title {
+        position: relative;
+        a.recent {
+          padding-right: 16px;
+        }
+        img {
+          position: absolute;
+          top: 6px;
+          right: 0;
+        }
+      }
+      .description {
+        display: none;
+      }
+    }
+  }
+}
+.content-list {
+  .col-outer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .col-inner {
+    .col-thumbnail {
+      float: left;
+      margin-right: 20px;
+    }
+    .caption {
+      .description {
+        display: block;
+      }
+    }
+  }
+}
+
+// Pad out the copyright
+.copyright {
+  padding: 30px;
+}
+
+// Ellipsis effect for text
+.ellipsis {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#navigationButtons {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.6em;
+  a {
+    text-decoration: none;
+  }
+  span.glyphicon {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+}
+
+#slideshow {
+  #navigationButtons {
+    margin-top: 20px;
+  }
+}
+
+#theImage {
+  position: relative;
+  overflow-x: hidden;
+  text-align: center;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+#sidebar {
+  position: absolute;
+  right: -250px;
+  text-align: left;
+  z-index: 10000;
+  .handle {
+    margin-top: 30px;
+    float: right;
+    background-color: #ccc;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: -5px 0 10px 0px #ddd;
+    a {
+      display: block;
+      padding: 10px;
+      color: #fff;
+    }
+    a:hover {
+      color: #eee;
+    }
+    .glyphicon {
+      font-size: 1.2em;
+    }
+  }
+  .info {
+    float: right;
+    background-color: @gray-lighter;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 250px;
+    padding: 20px;
+    box-shadow: -5px 0 10px 0px #ddd;
+    dl {
+      margin-bottom: 0;
+    }
+    button {
+      max-width: 210px;
+    }
+  }
+}
+
+#important-info {
+  margin-top: 20px;
+  #visits {
+    float: left;
+    span.count {
+      margin-left: 15px;
+    }
+  }
+
+  #rating {
+    float: right;
+    .rateButtonStarFull {
+      .glyphicon;
+      .glyphicon-star;
+      cursor:pointer;
+    }
+    .rateButtonStarEmpty {
+      .glyphicon;
+      .glyphicon-star-empty;
+      cursor:pointer;
+    }
+  }
+}
+
+#share {
+  font-size: 2.5em;
+  text-align: center;
+  a {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+  }
+}
+
+#disqus_thread {
+  margin-top: 20px;
+}
+
+#commentList {
+  .comment {
+    clear: both;
+    .image {
+      img {
+        float: left;
+        width: 80px;
+        height: 80px;
+      }
+    }
+    .description {
+      margin-left: 100px;
+      form {
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+      .actions {
+        float:right;
+        font-size:90%
+      }
+    }
+  }
+}
+
+.comment-search {
+  margin-top: 20px;
+}
+
+.nav-pills {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+#tagCloud {
+  font-size: 120%;
+  text-align: center;
+  span {
+    margin: 5px;
+  }
+  .tagLevel5 {
+    font-size: 150% !important;
+  }
+  .tagLevel4 {
+    font-size: 140% !important;
+  }
+  .tagLevel3 {
+    font-size: 120% !important;
+  }
+  .tagLevel2 {
+    font-size: 100% !important;
+  }
+  .tagLevel1 {
+    font-size: 90% !important;
+  }
+}
+
+#tagCloudCanvas {
+  width: 100%;
+  height: 600px;
+  margin: 0 auto;
+  span {
+    display: none;
+  }
+}
+
+#tagCloudGradientStart {
+  display: none;
+  color: #ccc;
+}
+
+#tagCloudGradientEnd {
+  display: none;
+  color: @brand-primary;
+}
+
+#tagLetters {
+  padding-left: 2px;
+  padding-right: 7px;
+  *, *:before, *:after {box-sizing:  border-box !important;}
+  .row {
+    -moz-column-width: 17em;
+    -webkit-column-width: 17em;
+    -moz-column-gap: -1em;
+    -webkit-column-gap: -1em;
+
+  }
+  .menu-category {
+    display: inline-block;
+    margin:  0.26rem;
+    padding:  1rem;
+    width:  100%;
+  }
+}
+
+#thePopuphelpPage {
+  .jumbotron {
+    display: none;
+  }
+}
+
+@media (min-width: @screen-sm-min) {
+  // Remove the double padding on small/medium/large screens
+  .navbar-collapse {
+    padding-right: 0;
+  }
+
+  // Make dropdown menu scrollable with scrollbar
+  .dropdown-menu-scrollable {
+    height: auto;
+    max-height: 300px;
+    overflow-x: hidden;
+  }
+  .dropdown-menu-scrollable::-webkit-scrollbar {
+    width: 1em;
+  }
+  .dropdown-menu-scrollable::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  }
+  .dropdown-menu-scrollable::-webkit-scrollbar-thumb {
+    background-color: @gray-light;
+    outline: 1px solid @gray-light;
+  }
+}
+
+@media (min-width: @screen-md-min) {
+  // Display forms on drop down menus when on desktop
+  .navbar-form-desktop {
+    display: block;
+  }
+}

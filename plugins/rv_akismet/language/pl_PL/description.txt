@@ -1,0 +1,1 @@
+ywa usługi online Akismet do sprawdzania czy komentarz nie jest spamem.

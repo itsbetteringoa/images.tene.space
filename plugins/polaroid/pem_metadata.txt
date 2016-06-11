@@ -1,0 +1,4 @@
+File automatically created from SVN or Git repository.
+
+URL: https://github.com/plegall/Piwigo-polaroid 
+Revision: a220dc7b736d8de94be781d0f27804e9badb86e8 (Thu Oct 8 13:31:01 2015 +0200)

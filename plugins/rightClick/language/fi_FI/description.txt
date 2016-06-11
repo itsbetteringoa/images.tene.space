@@ -1,0 +1,1 @@
+rightClick deaktivoi oikeanhiirenklikkausvalikon weppi-kuvakoolle kaikille paitsi ylläpitäjille. Huomioi ettei rightClick kuitenkaan suojaa täysin kuvien kopioimiselta.

@@ -1,0 +1,4 @@
+File automatically created from SVN or Git repository.
+
+URL: https://github.com/plegall/Piwigo-batch_manager_added_by 
+Revision: 62d49d8d6f9e4a47bd3f3525ce875c4d2ab0c040 (Fri Feb 20 15:26:57 2015 +0000)

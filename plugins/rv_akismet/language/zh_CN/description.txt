@@ -1,0 +1,1 @@
+使用http://www.akismet.com在线服务检查用户评论中的垃圾信息

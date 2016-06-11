@@ -1,0 +1,1 @@
+Autoryzuj pobieranie zdjęć, filtrowane według albumu.

@@ -1,0 +1,1 @@
+Deshabilita el menú contextual del botó dret als usuaris per a dificultar la descàrrega d'imatges.

@@ -1,0 +1,1 @@
+rightClick išjungia dešiniojo pelės mygtuko meniu ant web dydžio nuotraukų. Dešinysis mygtukas lieka aktyvus vartotojams su "Admins" privatumo lygiu. Turėkite omeny, kad rightClick nėra absoliuti apsauga nuo paveiksliukų kopijavimo.

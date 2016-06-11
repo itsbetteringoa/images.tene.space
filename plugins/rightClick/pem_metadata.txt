@@ -1,0 +1,4 @@
+File automatically created from SVN or Git repository.
+
+URL: https://github.com/Piwigo/rightClick 
+Revision: 1b94d4930a76c2c0549b964dd9ce3c20e52f6951 (Mon Mar 21 15:20:52 2016 +0100)

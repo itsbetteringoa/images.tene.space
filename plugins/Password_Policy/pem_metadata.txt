@@ -1,0 +1,4 @@
+File automatically created from SVN or Git repository.
+
+URL: https://github.com/Eric-Piwigo/Password_Policy 
+Revision: 60917349251cf5de91230eb75055ca87885ee0ef (Fri Oct 2 23:59:10 2015 +0200)

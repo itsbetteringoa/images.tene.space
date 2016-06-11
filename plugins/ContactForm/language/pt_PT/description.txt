@@ -1,0 +1,1 @@
+Adicionar "Contacte-nos" no bloco Menú para proporcionar aos utilizadores o formulário de contacto. 

@@ -1,0 +1,1 @@
+Maakt het mogelijk om ook op albums commentaar te geven.

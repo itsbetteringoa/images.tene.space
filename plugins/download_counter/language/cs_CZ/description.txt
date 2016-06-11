@@ -1,0 +1,1 @@
+Počítadlo počtu stažení u každé fotografie

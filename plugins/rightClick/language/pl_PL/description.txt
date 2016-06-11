@@ -1,0 +1,1 @@
+rightClick wyłącza menu kontekstowe pod prawym klawiszem myszy na stronie ze zdjęciami. Użytkownicy grupy "Administrator" nie są blokowani. Proszę pamiętać, że rightClick nie zabezpieczenia w pełni przed kopiowaniem obrazów.

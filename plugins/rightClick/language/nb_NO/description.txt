@@ -1,0 +1,3 @@
+RightClick deaktiverer høyrekliks menyen på bilder skalert for visning på web. Brukere med "Admin" rettigheter beholder
+
+høyreklikk mulighetene. Vennligst husk at blokkering av høyreklikk ikke er en fullgod sikkerhet mot kopiering av bilder.
