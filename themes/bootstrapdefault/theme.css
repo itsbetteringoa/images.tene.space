@@ -28,6 +28,70 @@
     font-size: 22px;
     margin: 10px;
 }
+.calendarViews strong {
+  float: left;
+  margin-right: 20px;
+  margin-top: 5px;
+}
+.calendarViews ul {
+
+    border: 1px solid;
+    border-radius: 5px;
+    clear: right;
+}
+.calendarViews {
+  height: 50px !important;
+    min-height: 50px !important;
+    clear: both;
+    float: left;
+}
+.calendarViews ul li a {
+  padding: 5px;
+}
+.calendarViews ul li a:hover, .calendarViews ul li a:focus, .calendarViews .nav .open>a, .calendarViews .nav .open>a:focus, .calendarViews .nav .open>a:hover {
+  background-color: transparent;
+}
+.calendarBar {
+  float: right;
+    clear: right;
+}
+.calendarBar a {
+    padding: 7px;
+}
+div#content {
+  clear: both;
+}
+a.navbar-brand span {
+    top: -5px;
+    position: relative;
+}
+
+span.fc-time{
+  display: none !important;
+}
+span.fc-title {
+  position: absolute !important;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  padding: 3px;
+}
+a.fc-event {
+  width: 130px ;
+    top: -20px ;
+    margin-bottom: -15px ;
+}
+.fc tbody .fc-row .fc-content-skeleton tbody tr:last-child td {
+  padding-bottom: 0px !important;
+}
+table.fc-year-main-table.fc-border-separate img {
+  width: 50px !important;
+}
+table.fc-year-main-table.fc-border-separate a.fc-event {
+  width: auto !important;
+  top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
 
 .thumbnail > img,
 .thumbnail a > img,

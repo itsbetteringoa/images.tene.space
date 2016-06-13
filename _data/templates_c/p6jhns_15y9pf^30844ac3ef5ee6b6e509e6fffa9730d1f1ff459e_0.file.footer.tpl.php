@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-11 16:33:40
+/* Smarty version 3.1.29, created on 2016-06-13 06:06:56
   from "/home/j/jakovlevz/test/public_html/subdomains/images/admin/themes/default/template/footer.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_575c13343c3f66_70160940',
+  'unifunc' => 'content_575e2350dc0536_70486225',
   'file_dependency' => 
   array (
     '30844ac3ef5ee6b6e509e6fffa9730d1f1ff459e' => 
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_575c13343c3f66_70160940 ($_smarty_tpl) {
+function content_575e2350dc0536_70486225 ($_smarty_tpl) {
 ?>
 
 </div>

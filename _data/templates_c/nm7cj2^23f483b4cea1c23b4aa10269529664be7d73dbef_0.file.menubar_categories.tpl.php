@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-11 16:35:10
+/* Smarty version 3.1.29, created on 2016-06-13 06:08:04
   from "/home/j/jakovlevz/test/public_html/subdomains/images/themes/bootstrapdefault/template/menubar_categories.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_575c138eaa36e2_43706397',
+  'unifunc' => 'content_575e23944fd042_93169928',
   'file_dependency' => 
   array (
     '23f483b4cea1c23b4aa10269529664be7d73dbef' => 
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_575c138eaa36e2_43706397 ($_smarty_tpl) {
+function content_575e23944fd042_93169928 ($_smarty_tpl) {
 ?>
 <li class="dropdown">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo l10n('Albums');?>

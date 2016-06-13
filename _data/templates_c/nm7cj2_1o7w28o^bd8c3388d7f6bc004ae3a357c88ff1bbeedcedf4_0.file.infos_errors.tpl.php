@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-11 16:35:11
+/* Smarty version 3.1.29, created on 2016-06-13 06:08:15
   from "/home/j/jakovlevz/test/public_html/subdomains/images/themes/bootstrapdefault/template/infos_errors.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_575c138f1cde55_59516994',
+  'unifunc' => 'content_575e239f46c570_86977729',
   'file_dependency' => 
   array (
     'bd8c3388d7f6bc004ae3a357c88ff1bbeedcedf4' => 
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_575c138f1cde55_59516994 ($_smarty_tpl) {
+function content_575e239f46c570_86977729 ($_smarty_tpl) {
 if (isset($_smarty_tpl->tpl_vars['errors']->value)) {?>
 <div class="container">
 <?php

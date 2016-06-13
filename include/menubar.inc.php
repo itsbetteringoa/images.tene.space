@@ -277,12 +277,12 @@ function initialize_menu()
     }
 
     // about link
-    $block->data['about'] =
-      array(
-        'TITLE'     => l10n('About Piwigo'),
-        'NAME'      => l10n('About'),
-        'URL' => get_root_url().'about.php',
-      );
+    // $block->data['about'] =
+    //   array(
+    //     'TITLE'     => l10n('About Piwigo'),
+    //     'NAME'      => l10n('About'),
+    //     'URL' => get_root_url().'about.php',
+    //   );
 
     // notification
     $block->data['rss'] =

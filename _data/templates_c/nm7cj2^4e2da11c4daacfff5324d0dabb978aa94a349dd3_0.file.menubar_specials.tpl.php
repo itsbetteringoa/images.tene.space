@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-11 16:35:10
+/* Smarty version 3.1.29, created on 2016-06-13 06:08:04
   from "/home/j/jakovlevz/test/public_html/subdomains/images/themes/bootstrapdefault/template/menubar_specials.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_575c138eae1384_14583736',
+  'unifunc' => 'content_575e2394515ff8_76600273',
   'file_dependency' => 
   array (
     '4e2da11c4daacfff5324d0dabb978aa94a349dd3' => 
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_575c138eae1384_14583736 ($_smarty_tpl) {
+function content_575e2394515ff8_76600273 ($_smarty_tpl) {
 ?>
 <li class="dropdown">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo l10n('Specials');?>

@@ -2,6 +2,8 @@
 {combine_script id='core.switchbox' require='jquery' path='themes/default/js/switchbox.js'}
 {combine_script id='cookie' require='jquery' path="themes/bootstrapdefault/js/jquery.cookie.js"}
 {combine_script id='equalheights' require='jquery' path="themes/bootstrapdefault/js/jquery.equalheights.js"}
+
+{combine_script id='ycalendar' require='jquery' path="themes/bootstrapdefault/js/fullcalendar.js"}
 {if !empty($PLUGIN_INDEX_CONTENT_BEFORE)}{$PLUGIN_INDEX_CONTENT_BEFORE}{/if}
 
 <nav class="navbar navbar-default" role="navigation">
@@ -127,16 +129,23 @@
 
 
 {if isset($chronology_views)}
-<div class="calendarViews">{'View'|@translate}:
-    <a id="calendarViewSwitchLink" href="#">
-        {foreach from=$chronology_views item=view}{if $view.SELECTED}{$view.CONTENT}{/if}{/foreach}
-    </a>
-    <div id="calendarViewSwitchBox" class="switchBox">
+    <div class="calendarViews"><strong>{'View'|@translate}:</strong>
+<ul class="nav navbar-nav">
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{foreach from=$chronology_views item=view}{if $view.SELECTED}{$view.CONTENT}{/if}{/foreach}<span class="caret"></span></a>
+    <ul class="dropdown-menu dropdown-menu-scrollable" role="menu">
         {foreach from=$chronology_views item=view name=loop}{if !$smarty.foreach.loop.first}<br>{/if}
-            <span{if !$view.SELECTED} style="visibility:hidden"{/if}>&#x2714; </span><a href="{$view.VALUE}">{$view.CONTENT}</a>
+        <li>
+           <a href="{$view.VALUE}">{$view.CONTENT}</a>
+           {if $view.CONTENT=='Monthly list'}
+            {assign var=calendar_date value=$view.VALUE|regex_replace:"/.*-20/":"20"}            
+           {/if}
+        </li>
         {/foreach}
-    </div>
-    {footer_script}(SwitchBox=window.SwitchBox||[]).push("#calendarViewSwitchLink", "#calendarViewSwitchBox");{/footer_script}
+    </ul>
+    </li>
+</ul>
+
 </div>
 {/if}
 

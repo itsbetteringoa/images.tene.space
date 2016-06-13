@@ -276,12 +276,14 @@ class CalendarMonthly extends CalendarBase
       $nav_bar = $this->get_nav_bar_from_items( $chronology_date,
               $year_data['children'], false, false, $lang['month'] );
 
+      unset ( $page['chronology_date'][CDAY] );
+      
       $tpl_var['calendar_bars'][] =
         array(
           'U_HEAD'  => $url,
           'NB_IMAGES' => $year_data['nb_images'],
           'HEAD_LABEL' => $year,
-          'items' => $nav_bar,
+          'items' => $nav_bar
         );
     }
 
@@ -334,6 +336,27 @@ class CalendarMonthly extends CalendarBase
 
       $nav_bar = $this->get_nav_bar_from_items( $chronology_date,
                        $month_data['children'], false );
+
+$month_=str_pad($month, 2, "0", STR_PAD_LEFT);
+$date_where=$this->get_date_where();
+
+foreach ($nav_bar as $key => $value) {
+    $query = '
+  SELECT id, file,representative_ext,path,width,height,rotation';
+      $query.= $this->inner_sql;
+      $query.= preg_replace('/-\d+-\d+/', '-'.str_pad($month, 2, "0", STR_PAD_LEFT).'-'.str_pad($value['LABEL'], 2, "0", STR_PAD_LEFT), $date_where);
+      $query.= '
+    ORDER BY '.DB_RANDOM_FUNCTION.'()
+    LIMIT 1';
+    
+      $row = pwg_db_fetch_assoc(pwg_query($query));
+      $derivative = new DerivativeImage(IMG_SQUARE, new SrcImage($row));
+      $nav_bar[$key]['derivative']=$derivative->get_url();
+      $nav_bar[$key]['month']=$month_;
+      $nav_bar[$key]['alt']=$row['file'];
+}
+
+//var_dump($nav_bar); die();
 
       $tpl_var['calendar_bars'][] =
         array(

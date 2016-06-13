@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-11 16:35:10
+/* Smarty version 3.1.29, created on 2016-06-13 06:08:04
   from "/home/j/jakovlevz/test/public_html/subdomains/images/themes/bootstrapdefault/template/menubar.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_575c138ea66f29_08672872',
+  'unifunc' => 'content_575e23944c7d93_28658541',
   'file_dependency' => 
   array (
     '18101a9fa19340dd38826eed2a58658cd5272052' => 
     array (
       0 => '/home/j/jakovlevz/test/public_html/subdomains/images/themes/bootstrapdefault/template/menubar.tpl',
-      1 => 1458476976,
+      1 => 1465704492,
       2 => 'file',
     ),
   ),
@@ -19,10 +19,11 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_575c138ea66f29_08672872 ($_smarty_tpl) {
+function content_575e23944c7d93_28658541 ($_smarty_tpl) {
 ?>
             <!-- Start of menubar.tpl -->
             <ul class="nav navbar-nav">
+            
 <?php
 $_from = $_smarty_tpl->tpl_vars['blocks']->value;
 if (!is_array($_from) && !is_object($_from)) {
@@ -36,6 +37,7 @@ $_smarty_tpl->tpl_vars['block']->_loop = false;
 foreach ($_from as $_smarty_tpl->tpl_vars['id']->value => $_smarty_tpl->tpl_vars['block']->value) {
 $_smarty_tpl->tpl_vars['block']->_loop = true;
 $__foreach_block_0_saved_local_item = $_smarty_tpl->tpl_vars['block'];
+if ($_smarty_tpl->tpl_vars['id']->value == 'mbBatchDownloader') {?> <?php continue 1;?> <?php }
 if (!empty($_smarty_tpl->tpl_vars['block']->value->template)) {
 $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_MODIFIER]['get_extent'][0][0]->get_extent($_smarty_tpl->tpl_vars['block']->value->template,$_smarty_tpl->tpl_vars['id']->value), $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 ?>

@@ -62,7 +62,11 @@
     <link rel="up" title="{'Thumbnails'|@translate}" href="{$U_UP}">
 {/if}
 
+{combine_css path="themes/bootstrapdefault/fullcalendar.css" order=20}
+{combine_css path="themes/bootstrapdefault/fullcalendar.print.css" order=21}
+
 {combine_css path="themes/bootstrapdefault/bootstrap/dist/css/bootstrap.min.css" order=-20}
+
 {foreach from=$themes item=theme}
 {if $theme.load_css}
     {combine_css path="themes/`$theme.id`/theme.css" order=-10}
@@ -91,6 +95,9 @@
 {combine_script id='thumbnails-loader' require='jquery-ajaxmanager' path='themes/default/js/thumbnails.loader.js'}
 {combine_script id='bootstrap' require='jquery' path="themes/bootstrapdefault/bootstrap/dist/js/bootstrap.min.js"}
 {combine_script id=$themeconf.name require='bootstrap' path="themes/bootstrapdefault/js/theme.js"}
+{combine_script id='amoment' require='jquery' path="themes/bootstrapdefault/js/moment.min.js"}
+
+
 {get_combined_scripts load='header'}
 
     <!--[if lt IE 7]>
@@ -101,6 +108,7 @@
         {foreach from=$head_elements item=elt}{$elt}
         {/foreach}
     {/if}
+
 </head>
 
 <body id="{$BODY_ID}">
@@ -116,7 +124,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="{$U_HOME}"><img src="/favicon/spacemonkey_logo_200.png" height="50" alt="monkey_logo" title="tene.space/monkey"> {$GALLERY_TITLE}</a>
+                    <a class="navbar-brand" href="{$U_HOME}"><img src="/favicon/spacemonkey_logo_200.png" height="50" alt="monkey_logo" title="tene.space/monkey"> <span>{$GALLERY_TITLE}<span></a>
                 </div>
                 <div class="collapse navbar-collapse navbar-right" id="menubar-navbar-collapse">
 {$MENUBAR}

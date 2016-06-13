@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-11 16:35:11
+/* Smarty version 3.1.29, created on 2016-06-13 06:08:04
   from "/home/j/jakovlevz/test/public_html/subdomains/images/themes/bootstrapdefault/template/footer.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_575c138f3097f8_67165499',
+  'unifunc' => 'content_575e2394c1bc95_76877440',
   'file_dependency' => 
   array (
     '1e5ded44fb4823e4a232cfcc8cba8b8b82125ab3' => 
     array (
       0 => '/home/j/jakovlevz/test/public_html/subdomains/images/themes/bootstrapdefault/template/footer.tpl',
-      1 => 1465357064,
+      1 => 1465711415,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_575c138f3097f8_67165499 ($_smarty_tpl) {
+function content_575e2394c1bc95_76877440 ($_smarty_tpl) {
 ?>
         <!-- Start of footer.tpl -->
         <div class="copyright container">

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-11 16:35:10
+/* Smarty version 3.1.29, created on 2016-06-13 06:08:04
   from "/home/j/jakovlevz/test/public_html/subdomains/images/themes/bootstrapdefault/template/header.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_575c138ed61584_53163462',
+  'unifunc' => 'content_575e239463dbf4_66788346',
   'file_dependency' => 
   array (
     'c5745be89420dbf6267dd04573f6ff766cb00e7d' => 
     array (
       0 => '/home/j/jakovlevz/test/public_html/subdomains/images/themes/bootstrapdefault/template/header.tpl',
-      1 => 1465636368,
+      1 => 1465723769,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_575c138ed61584_53163462 ($_smarty_tpl) {
+function content_575e239463dbf4_66788346 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_replace')) require_once '/home/j/jakovlevz/test/public_html/subdomains/images/include/smarty/libs/plugins/modifier.replace.php';
 ?>
 <!DOCTYPE html>
@@ -140,7 +140,13 @@ if (isset($_smarty_tpl->tpl_vars['U_UP']->value)) {?>
 ">
 <?php }?>
 
+<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['combine_css'][0][0]->func_combine_css(array('path'=>"themes/bootstrapdefault/fullcalendar.css",'order'=>20),$_smarty_tpl);?>
+
+<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['combine_css'][0][0]->func_combine_css(array('path'=>"themes/bootstrapdefault/fullcalendar.print.css",'order'=>21),$_smarty_tpl);?>
+
+
 <?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['combine_css'][0][0]->func_combine_css(array('path'=>"themes/bootstrapdefault/bootstrap/dist/css/bootstrap.min.css",'order'=>-20),$_smarty_tpl);?>
+
 
 <?php
 $_from = $_smarty_tpl->tpl_vars['themes']->value;
@@ -199,6 +205,10 @@ if (!empty($_smarty_tpl->tpl_vars['page_refresh']->value)) {?>
 
 <?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['combine_script'][0][0]->func_combine_script(array('id'=>$_smarty_tpl->tpl_vars['themeconf']->value['name'],'require'=>'bootstrap','path'=>"themes/bootstrapdefault/js/theme.js"),$_smarty_tpl);?>
 
+<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['combine_script'][0][0]->func_combine_script(array('id'=>'amoment','require'=>'jquery','path'=>"themes/bootstrapdefault/js/moment.min.js"),$_smarty_tpl);?>
+
+
+
 <?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['get_combined_scripts'][0][0]->func_get_combined_scripts(array('load'=>'header'),$_smarty_tpl);?>
 
 
@@ -247,8 +257,8 @@ $_smarty_tpl->tpl_vars['elt'] = $__foreach_elt_2_saved_item;
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="<?php echo $_smarty_tpl->tpl_vars['U_HOME']->value;?>
-"><img src="/favicon/spacemonkey_logo_200.png" height="50" alt="monkey_logo" title="tene.space/monkey"> <?php echo $_smarty_tpl->tpl_vars['GALLERY_TITLE']->value;?>
-</a>
+"><img src="/favicon/spacemonkey_logo_200.png" height="50" alt="monkey_logo" title="tene.space/monkey"> <span><?php echo $_smarty_tpl->tpl_vars['GALLERY_TITLE']->value;?>
+<span></a>
                 </div>
                 <div class="collapse navbar-collapse navbar-right" id="menubar-navbar-collapse">
 <?php echo $_smarty_tpl->tpl_vars['MENUBAR']->value;?>

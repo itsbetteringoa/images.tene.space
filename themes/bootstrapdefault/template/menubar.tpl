@@ -1,6 +1,8 @@
             <!-- Start of menubar.tpl -->
             <ul class="nav navbar-nav">
+            
 {foreach from=$blocks key=id item=block}
+{if $id=='mbBatchDownloader'} {continue} {/if}
 {if not empty($block->template)}
 {include file=$block->template|@get_extent:$id }
 {else}

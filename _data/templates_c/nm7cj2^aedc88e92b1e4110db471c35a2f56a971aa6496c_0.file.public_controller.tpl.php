@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-11 16:35:10
+/* Smarty version 3.1.29, created on 2016-06-13 06:08:04
   from "/home/j/jakovlevz/test/public_html/subdomains/images/plugins/AdminTools/template/public_controller.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_575c138ef40be0_75930794',
+  'unifunc' => 'content_575e2394820b60_93538642',
   'file_dependency' => 
   array (
     'aedc88e92b1e4110db471c35a2f56a971aa6496c' => 
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_575c138ef40be0_75930794 ($_smarty_tpl) {
+function content_575e2394820b60_93538642 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once '/home/j/jakovlevz/test/public_html/subdomains/images/include/smarty/libs/plugins/function.html_options.php';
 echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['combine_css'][0][0]->func_combine_css(array('path'=>($_smarty_tpl->tpl_vars['ADMINTOOLS_PATH']->value).('template/public_style.css')),$_smarty_tpl);
 echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['combine_css'][0][0]->func_combine_css(array('path'=>'admin/themes/default/fontello/css/fontello.css'),$_smarty_tpl);

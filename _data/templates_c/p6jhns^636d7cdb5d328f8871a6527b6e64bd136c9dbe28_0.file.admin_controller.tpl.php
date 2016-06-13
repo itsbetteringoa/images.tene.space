@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-11 16:33:40
+/* Smarty version 3.1.29, created on 2016-06-13 06:06:56
   from "/home/j/jakovlevz/test/public_html/subdomains/images/plugins/AdminTools/template/admin_controller.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_575c13342aeed6_16085862',
+  'unifunc' => 'content_575e2350c9fa72_43469275',
   'file_dependency' => 
   array (
     '636d7cdb5d328f8871a6527b6e64bd136c9dbe28' => 
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_575c13342aeed6_16085862 ($_smarty_tpl) {
+function content_575e2350c9fa72_43469275 ($_smarty_tpl) {
 echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['combine_css'][0][0]->func_combine_css(array('path'=>($_smarty_tpl->tpl_vars['ADMINTOOLS_PATH']->value).('template/admin_style.css')),$_smarty_tpl);
 echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['combine_css'][0][0]->func_combine_css(array('path'=>($_smarty_tpl->tpl_vars['ADMINTOOLS_PATH']->value).('template/fontello/css/fontello-ato.css')),$_smarty_tpl);
 echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['combine_script'][0][0]->func_combine_script(array('id'=>'admintools.controller','load'=>'footer','require'=>'jquery','path'=>($_smarty_tpl->tpl_vars['ADMINTOOLS_PATH']->value).('template/admin_controller.js')),$_smarty_tpl);?>

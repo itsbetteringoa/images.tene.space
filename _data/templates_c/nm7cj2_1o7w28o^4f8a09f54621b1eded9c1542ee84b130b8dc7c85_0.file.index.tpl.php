@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-11 16:35:11
+/* Smarty version 3.1.29, created on 2016-06-13 06:08:15
   from "/home/j/jakovlevz/test/public_html/subdomains/images/themes/bootstrapdefault/template/index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_575c138f1ad109_55622760',
+  'unifunc' => 'content_575e239f44d072_00534338',
   'file_dependency' => 
   array (
     '4f8a09f54621b1eded9c1542ee84b130b8dc7c85' => 
     array (
       0 => '/home/j/jakovlevz/test/public_html/subdomains/images/themes/bootstrapdefault/template/index.tpl',
-      1 => 1465637232,
+      1 => 1465720281,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,8 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:navigation_bar.tpl' => 2,
   ),
 ),false)) {
-function content_575c138f1ad109_55622760 ($_smarty_tpl) {
+function content_575e239f44d072_00534338 ($_smarty_tpl) {
+if (!is_callable('smarty_modifier_regex_replace')) require_once '/home/j/jakovlevz/test/public_html/subdomains/images/include/smarty/libs/plugins/modifier.regex_replace.php';
 ?>
 <!-- Start of index.tpl -->
 <?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['combine_script'][0][0]->func_combine_script(array('id'=>'core.switchbox','require'=>'jquery','path'=>'themes/default/js/switchbox.js'),$_smarty_tpl);?>
@@ -29,6 +30,9 @@ function content_575c138f1ad109_55622760 ($_smarty_tpl) {
 <?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['combine_script'][0][0]->func_combine_script(array('id'=>'cookie','require'=>'jquery','path'=>"themes/bootstrapdefault/js/jquery.cookie.js"),$_smarty_tpl);?>
 
 <?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['combine_script'][0][0]->func_combine_script(array('id'=>'equalheights','require'=>'jquery','path'=>"themes/bootstrapdefault/js/jquery.equalheights.js"),$_smarty_tpl);?>
+
+
+<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['combine_script'][0][0]->func_combine_script(array('id'=>'ycalendar','require'=>'jquery','path'=>"themes/bootstrapdefault/js/fullcalendar.js"),$_smarty_tpl);?>
 
 <?php if (!empty($_smarty_tpl->tpl_vars['PLUGIN_INDEX_CONTENT_BEFORE']->value)) {
 echo $_smarty_tpl->tpl_vars['PLUGIN_INDEX_CONTENT_BEFORE']->value;
@@ -257,10 +261,11 @@ echo $_smarty_tpl->tpl_vars['PLUGIN_INDEX_CONTENT_BEGIN']->value;
 
 
 <?php if (isset($_smarty_tpl->tpl_vars['chronology_views']->value)) {?>
-<div class="calendarViews"><?php echo l10n('View');?>
-:
-    <a id="calendarViewSwitchLink" href="#">
-        <?php
+    <div class="calendarViews"><strong><?php echo l10n('View');?>
+:</strong>
+<ul class="nav navbar-nav">
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><?php
 $_from = $_smarty_tpl->tpl_vars['chronology_views']->value;
 if (!is_array($_from) && !is_object($_from)) {
 settype($_from, 'array');
@@ -279,9 +284,8 @@ $_smarty_tpl->tpl_vars['view'] = $__foreach_view_3_saved_local_item;
 if ($__foreach_view_3_saved_item) {
 $_smarty_tpl->tpl_vars['view'] = $__foreach_view_3_saved_item;
 }
-?>
-    </a>
-    <div id="calendarViewSwitchBox" class="switchBox">
+?><span class="caret"></span></a>
+    <ul class="dropdown-menu dropdown-menu-scrollable" role="menu">
         <?php
 $_from = $_smarty_tpl->tpl_vars['chronology_views']->value;
 if (!is_array($_from) && !is_object($_from)) {
@@ -299,9 +303,15 @@ $_smarty_tpl->tpl_vars['__smarty_foreach_loop']->value['first'] = $__foreach_loo
 $__foreach_loop_4_first = false;
 $__foreach_loop_4_saved_local_item = $_smarty_tpl->tpl_vars['view'];
 if (!(isset($_smarty_tpl->tpl_vars['__smarty_foreach_loop']->value['first']) ? $_smarty_tpl->tpl_vars['__smarty_foreach_loop']->value['first'] : null)) {?><br><?php }?>
-            <span<?php if (!$_smarty_tpl->tpl_vars['view']->value['SELECTED']) {?> style="visibility:hidden"<?php }?>>&#x2714; </span><a href="<?php echo $_smarty_tpl->tpl_vars['view']->value['VALUE'];?>
+        <li>
+           <a href="<?php echo $_smarty_tpl->tpl_vars['view']->value['VALUE'];?>
 "><?php echo $_smarty_tpl->tpl_vars['view']->value['CONTENT'];?>
 </a>
+<?php if ($_smarty_tpl->tpl_vars['view']->value['CONTENT'] == 'Monthly list') {?>
+            <?php $_smarty_tpl->tpl_vars['calendar_date'] = new Smarty_Variable(smarty_modifier_regex_replace($_smarty_tpl->tpl_vars['view']->value['VALUE'],"/.*-20/","20"), null);
+$_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'calendar_date', 0);?>            
+<?php }?>
+        </li>
 <?php
 $_smarty_tpl->tpl_vars['view'] = $__foreach_loop_4_saved_local_item;
 }
@@ -312,9 +322,9 @@ if ($__foreach_loop_4_saved_item) {
 $_smarty_tpl->tpl_vars['view'] = $__foreach_loop_4_saved_item;
 }
 ?>
-    </div>
-    <?php $_smarty_tpl->smarty->_cache['tag_stack'][] = array('footer_script', array()); $_block_repeat=true; echo $_smarty_tpl->smarty->registered_plugins['block']['footer_script'][0][0]->block_footer_script(array(), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
-(SwitchBox=window.SwitchBox||[]).push("#calendarViewSwitchLink", "#calendarViewSwitchBox");<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo $_smarty_tpl->smarty->registered_plugins['block']['footer_script'][0][0]->block_footer_script(array(), $_block_content, $_smarty_tpl, $_block_repeat); } array_pop($_smarty_tpl->smarty->_cache['tag_stack']);?>
+    </ul>
+    </li>
+</ul>
 
 </div>
 <?php }?>

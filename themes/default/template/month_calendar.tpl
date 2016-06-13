@@ -2,10 +2,10 @@
 {foreach from=$chronology_navigation_bars item=bar}
 <div class="calendarBar">
 	{if isset($bar.previous)}
-		<div style="float:left;margin-right:5px">&laquo; <a href="{$bar.previous.URL}">{$bar.previous.LABEL}</a></div>
+		<div style="float:left;margin-right:5px">&laquo; <a class = "btn btn-default" role="button" href="{$bar.previous.URL}">{$bar.previous.LABEL}</a></div>
 	{/if}
 	{if isset($bar.next)}
-		<div style="float:right;margin-left:5px"><a href="{$bar.next.URL}">{$bar.next.LABEL}</a> &raquo;</div>
+		<div style="float:right;margin-left:5px"><a class = "btn btn-default" role="button"  href="{$bar.next.URL}">{$bar.next.LABEL}</a> &raquo;</div>
 	{/if}
 	{if empty($bar.items)}
 		&nbsp;
@@ -14,7 +14,7 @@
 		{if !isset($item.URL)}
 		<span class="calItem">{$item.LABEL}</span>
 		{else}
-		<a class="calItem"{if isset($item.NB_IMAGES)} title="{$item.NB_IMAGES|@translate_dec:'%d photo':'%d photos'}"{/if} href="{$item.URL}">{$item.LABEL}</a>
+		<a class = "btn btn-default" role="button"  {if isset($item.NB_IMAGES)} title="{$item.NB_IMAGES|@translate_dec:'%d photo':'%d photos'}"{/if} href="{$item.URL}">{$item.LABEL}</a>
 		{/if}
 		{/foreach}
 	{/if}
@@ -22,26 +22,104 @@
 {/foreach}
 {/if}
 
-{if !empty($chronology_calendar.calendar_bars)}
-{foreach from=$chronology_calendar.calendar_bars item=bar}
-<div class="calendarCalBar">
-	<span class="calCalHead"><a href="{$bar.U_HEAD}">{$bar.HEAD_LABEL}</a>  ({$bar.NB_IMAGES})</span><br>
-	{foreach from=$bar.items item=item}
-	<span class="calCal{if !isset($item.URL)}Empty{/if}">
-	{if isset($item.URL)}
-	<a href="{$item.URL}">{$item.LABEL}</a>
-	{else}
-	{$item.LABEL}
-	{/if}
-	{if isset($item.NB_IMAGES)}({$item.NB_IMAGES}){/if}
-	</span>
+
+{if isset($chronology_calendar.month_view) || !empty($chronology_calendar.calendar_bars)}
+{assign var=c_date value=$calendar_date|explode:"-"}
+{if !empty($chronology_calendar.calendar_bars)} {$c_date[1]=1} {/if}
+{$def_date="`$c_date[0]`-`$c_date[1]`-01"|date_format:'%Y-%m-%d'}
+{$c_date[1]=$c_date[1]-1}
+{$ind=0}
+{if isset($chronology_calendar.month_view)}
+	{foreach from=$chronology_calendar.month_view.weeks item=week}
+	 	{foreach from=$week item=day}
+	 	{if !empty($day)}
+	 		{if isset($day.IMAGE)}
+	 			{$arr_cal[$ind].title=$day.NB_ELEMENTS|@translate_dec:'%d photo':'%d photos' }
+	 			{$arr_cal[$ind].start=$day.DAY}
+	 			{$arr_cal[$ind].url=$day.U_IMG_LINK}
+	 			{$arr_cal[$ind].src=$day.IMAGE}
+	 			{$arr_cal[$ind].alt=$day.IMAGE_ALT}
+	 			{$ind=$ind+1}
+	 		{/if}
+	 	{/if}
+	 {/foreach}
 	{/foreach}
-</div>
+	{$img_width=130}
+{else}
+	{foreach from=$chronology_calendar.calendar_bars item=bar}
+		{foreach from=$bar.items item=day}		
+			{if isset($day.URL)}
+				{$arr_cal[$ind].title=$day.NB_IMAGES|@translate_dec:'%d photo':'%d photos' }
+	 			{$arr_cal[$ind].start_d=$day.LABEL}
+	 			{$arr_cal[$ind].start_m=$day.month}
+	 			{$arr_cal[$ind].url=$day.URL}
+	 			{$arr_cal[$ind].src=$day.derivative}	 	
+	 			{$arr_cal[$ind].alt=$day.alt}
+	 			{$ind=$ind+1}
+		{/if}
+	
+	{/foreach}
 {/foreach}
+	{$img_width=50}
 {/if}
 
-{if isset($chronology_calendar.month_view)}
-<table class="calMonth">
+<div id='calendar'></div>
+{footer_script}{literal}$(document).ready(function(){
+  {/literal}
+  var date = new Date({$c_date[0]},{$c_date[1]}{literal},1);
+    var d = date.getDate();
+    var m = date.getMonth();
+    var y = date.getFullYear();
+
+    var events_array = [
+    {/literal}
+
+    {foreach from=$arr_cal item=event}
+           	{ 
+	        title: "{$event.title}",
+	       {if isset($chronology_calendar.month_view)} start: new Date(y, m, {$event.start}),
+	       {else} start: new Date(y, {$event.start_m}, {$event.start_d}),
+	       {/if}
+	        src:	"{$event.src}",
+	        alt:	"{$event.alt}",
+	        url:	"{$event.url}"
+	        },
+	{/foreach}
+    	
+    {literal}
+    ];
+    $('#calendar').fullCalendar({
+        header: {
+            left: '',
+            center: 'title',
+            right: ''
+        }, 
+
+        defaultDate: "{/literal}{$def_date}",
+        {if !empty($chronology_calendar.calendar_bars)}
+        	defaultView: 'year',
+			yearColumns: 3,
+			selectable: false,
+			selectHelper: false,
+			className:	'full_year',
+        {else} editable: false,
+        {/if}{literal}
+        allDay: true,
+        events: events_array,
+        backgroundColor: 'transparent',
+        borderColor: 'none',
+        
+        eventRender: function(event, element) {
+		     for(var obj of events_array) {
+		        if(event.alt==obj.alt)	
+		        	element.find('.fc-content').append('<img src="' + obj.src + '" width="130" alt="' + obj.alt+'" title="' + obj.title +'"> ')
+			}
+	        	
+	        }
+        })
+    });
+    {/literal}{/footer_script}
+<!-- 
  <thead>
  <tr>
  {foreach from=$chronology_calendar.month_view.wday_labels item=wday}
@@ -54,6 +132,7 @@
 	width:{$chronology_calendar.month_view.CELL_WIDTH}px;height:{$chronology_calendar.month_view.CELL_HEIGHT}px
 }
 {/html_style}
+
  {foreach from=$chronology_calendar.month_view.weeks item=week}
  <tr>
  	{foreach from=$week item=day}
@@ -77,5 +156,6 @@
  </tr>
  {/foreach}{*week in month*}
 </table>
+-->
 {/if}
 
