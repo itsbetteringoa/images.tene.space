@@ -102,6 +102,7 @@ function dlcount_picture()
 
 function dlcount_picture_prefilter($content, &$smarty)
 {
+
   $search = '{if $display_info.rating_score';
   
   $replace = '

@@ -16,7 +16,7 @@
 {/if}
             </div>
         </div>
-        <div class="navbar-right">
+        <div class="navbar-right glyph_bar">
             <ul class="nav navbar-nav">
 {if !empty($image_orders)}
                 <li class="dropdown">
@@ -124,7 +124,7 @@
 {include file='infos_errors.tpl'}
 
 <a name="content"></a>
-<div class="container">
+<div class="container {if isset($chronology_views)}calender_container{/if}">
 {if !empty($PLUGIN_INDEX_CONTENT_BEGIN)}{$PLUGIN_INDEX_CONTENT_BEGIN}{/if}
 
 
@@ -137,7 +137,7 @@
         {foreach from=$chronology_views item=view name=loop}{if !$smarty.foreach.loop.first}<br>{/if}
         <li>
            <a href="{$view.VALUE}">{$view.CONTENT}</a>
-           {if $view.CONTENT=='Monthly list'}
+           {if $view.VALUE|strstr:'monthly-calendar'}
             {assign var=calendar_date value=$view.VALUE|regex_replace:"/.*-20/":"20"}            
            {/if}
         </li>
@@ -155,9 +155,9 @@
 
 
 {if !empty($CONTENT_DESCRIPTION)}
-    <h4>
-        {$CONTENT_DESCRIPTION}
-    </h4>
+    <div class="bs-callout bs-callout-info">
+        {$CONTENT_DESCRIPTION|nl2br}
+    </div>
 {/if}
     <div id="content" class="row {if $smarty.cookies.view == 'list'}content-list{else}content-grid{/if}">
 {if !empty($CONTENT)}

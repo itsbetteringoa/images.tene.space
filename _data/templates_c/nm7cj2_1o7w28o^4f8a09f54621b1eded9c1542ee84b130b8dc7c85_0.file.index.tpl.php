@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-13 06:08:15
+/* Smarty version 3.1.29, created on 2016-06-13 11:58:03
   from "/home/j/jakovlevz/test/public_html/subdomains/images/themes/bootstrapdefault/template/index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_575e239f44d072_00534338',
+  'unifunc' => 'content_575e759bdfde15_51919255',
   'file_dependency' => 
   array (
     '4f8a09f54621b1eded9c1542ee84b130b8dc7c85' => 
     array (
       0 => '/home/j/jakovlevz/test/public_html/subdomains/images/themes/bootstrapdefault/template/index.tpl',
-      1 => 1465720281,
+      1 => 1465808274,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:navigation_bar.tpl' => 2,
   ),
 ),false)) {
-function content_575e239f44d072_00534338 ($_smarty_tpl) {
+function content_575e759bdfde15_51919255 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_regex_replace')) require_once '/home/j/jakovlevz/test/public_html/subdomains/images/include/smarty/libs/plugins/modifier.regex_replace.php';
 ?>
 <!-- Start of index.tpl -->
@@ -51,7 +51,7 @@ echo $_smarty_tpl->tpl_vars['chronology']->value['TITLE'];?>
 <?php }?>
             </div>
         </div>
-        <div class="navbar-right">
+        <div class="navbar-right glyph_bar">
             <ul class="nav navbar-nav">
 <?php if (!empty($_smarty_tpl->tpl_vars['image_orders']->value)) {?>
                 <li class="dropdown">
@@ -254,7 +254,7 @@ if ((!empty($_smarty_tpl->tpl_vars['CATEGORIES']->value) && !isset($_smarty_tpl-
 
 
 <a name="content"></a>
-<div class="container">
+<div class="container <?php if (isset($_smarty_tpl->tpl_vars['chronology_views']->value)) {?>calender_container<?php }?>">
 <?php if (!empty($_smarty_tpl->tpl_vars['PLUGIN_INDEX_CONTENT_BEGIN']->value)) {
 echo $_smarty_tpl->tpl_vars['PLUGIN_INDEX_CONTENT_BEGIN']->value;
 }?>
@@ -307,7 +307,7 @@ if (!(isset($_smarty_tpl->tpl_vars['__smarty_foreach_loop']->value['first']) ? $
            <a href="<?php echo $_smarty_tpl->tpl_vars['view']->value['VALUE'];?>
 "><?php echo $_smarty_tpl->tpl_vars['view']->value['CONTENT'];?>
 </a>
-<?php if ($_smarty_tpl->tpl_vars['view']->value['CONTENT'] == 'Monthly list') {?>
+<?php if (strstr($_smarty_tpl->tpl_vars['view']->value['VALUE'],'monthly-calendar')) {?>
             <?php $_smarty_tpl->tpl_vars['calendar_date'] = new Smarty_Variable(smarty_modifier_regex_replace($_smarty_tpl->tpl_vars['view']->value['VALUE'],"/.*-20/","20"), null);
 $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'calendar_date', 0);?>            
 <?php }?>
@@ -337,10 +337,10 @@ $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, $_smarty_tpl->tpl_
 
 
 <?php if (!empty($_smarty_tpl->tpl_vars['CONTENT_DESCRIPTION']->value)) {?>
-    <h4>
-        <?php echo $_smarty_tpl->tpl_vars['CONTENT_DESCRIPTION']->value;?>
+    <div class="bs-callout bs-callout-info">
+        <?php echo nl2br($_smarty_tpl->tpl_vars['CONTENT_DESCRIPTION']->value);?>
 
-    </h4>
+    </div>
 <?php }?>
     <div id="content" class="row <?php if ($_COOKIE['view'] == 'list') {?>content-list<?php } else { ?>content-grid<?php }?>">
 <?php if (!empty($_smarty_tpl->tpl_vars['CONTENT']->value)) {?>

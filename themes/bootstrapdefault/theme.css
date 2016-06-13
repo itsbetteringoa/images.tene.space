@@ -1,7 +1,7 @@
 .navbar-brand>img {
   margin-top: -13px;
   display: inline !important;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 .content-grid .col-inner .caption h3.title a {
   font-size: 16px !important;
@@ -16,7 +16,7 @@
     font-size: 16px;
     background: rgba(0,0,0,0.4);
     width: auto;
-    right: 17px;
+    right: 0px;
 }
 .cat_inf p {
     float: left;
@@ -28,6 +28,10 @@
     font-size: 22px;
     margin: 10px;
 }
+.mp_thumb {
+  position: relative;
+   margin-right: 15px !important;
+}
 .calendarViews strong {
   float: left;
   margin-right: 20px;
@@ -37,11 +41,11 @@
 
     border: 1px solid;
     border-radius: 5px;
-    clear: right;
+    clear: both;
 }
 .calendarViews {
-  height: 50px !important;
-    min-height: 50px !important;
+  height: 70px !important;
+    min-height: 70px !important;
     clear: both;
     float: left;
 }
@@ -91,6 +95,150 @@ table.fc-year-main-table.fc-border-separate a.fc-event {
   top: 0px !important;
   margin-bottom: 0px !important;
 }
+@media screen and (max-width: 321px) {
+  .navbar-brand {
+    margin-left: -19px;
+      padding: 11px;
+  }
+}
+.fc-toolbar .fc-left {
+  margin-left: 20px;
+}
+#important-info #visits {
+  float: none !important;
+}
+@media screen and (max-width: 780px) {
+   .calendarBar {
+      margin-bottom: 15px;
+   }
+   .calendarViews ul {
+    position: relative !important;
+    clear: both;
+    margin-left: 0px;
+   }
+   #calendar {
+    min-width: 980px;
+   }
+   .content-grid .col-inner .col-thumbnail {
+    float: left !important;
+   }
+   .calender_container.container {
+    overflow-y: scroll;
+   }
+   .container {
+    margin-left: 15px !important;
+    
+  }  
+  .navbar-right {
+    margin-top: -10px !important;
+  }
+  .navbar-collapse.navbar-right {
+    width: 100% !important;
+  }
+  .glyph_bar .nav>li {
+    display: table-cell !important;
+    
+  }
+  .glyph_bar .open .dropdown-menu {
+    position: absolute !important;
+  }
+  .navbar-brand {
+    height: auto !important;
+  }
+  
+  .caption {
+    clear: both;
+  }
+  .col-inner {
+        height: auto !important;
+  }
+  .content-list .col-inner .col-thumbnail {
+    margin-bottom: 10px;
+  }
+  .col-outer {
+    margin-top: 10px !important;
+  height: auto !important;
+    clear: both;
+  }
+  .col-inner a {
+        font-size: 16px;
+    height: auto !important;
+    clear: both;
+  }
+  .col-thumbnail {
+    margin-top: 0px !important;
+  }
+  .navbar-nav .open .dropdown-menu {
+    background-color: white !important;
+  }
+}
+
+
+.bs-callout {
+padding: 20px;
+margin: 0px 0 20px;
+border: 1px solid #eee;
+border-left-width: 5px;
+border-radius: 3px;
+font-size: 16px;
+text-align: left;
+}
+.bs-callout span.badge {
+    font-size: 19px;
+}
+.bs-callout h4 {
+margin-top: 0;
+margin-bottom: 5px;
+font-family: 'oswaldbold';
+font-size: 30px;
+}
+.bs-callout p:last-child {
+margin-bottom: 0;
+}
+.bs-callout code {
+border-radius: 3px;
+}
+.bs-callout+.bs-callout {
+margin-top: -5px;
+}
+.bs-callout-default {
+border-left-color: #777;
+}
+.bs-callout-default h4 {
+color: #777;
+}
+.bs-callout-primary {
+border-left-color: #428bca;
+}
+.bs-callout-primary h4 {
+color: #428bca;
+}
+.bs-callout-success {
+border-left-color: #5cb85c;
+}
+.bs-callout-success h4 {
+color: #5cb85c;
+
+}
+.bs-callout-danger {
+border-left-color: #d9534f;
+}
+.bs-callout-danger h4 {
+color: #d9534f;
+}
+.bs-callout-warning {
+border-left-color: #f0ad4e;
+}
+.bs-callout-warning h4 {
+color: #f0ad4e;
+}
+.bs-callout-info {
+border-left-color: #5bc0de;
+}
+.bs-callout-info h4 {
+color: #5bc0de;
+}
+
 
 
 .thumbnail > img,

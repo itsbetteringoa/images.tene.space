@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-13 06:08:04
+/* Smarty version 3.1.29, created on 2016-06-13 11:52:18
   from "/home/j/jakovlevz/test/public_html/subdomains/images/themes/bootstrapdefault/template/menubar_categories.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_575e23944fd042_93169928',
+  'unifunc' => 'content_575e744231d896_26980738',
   'file_dependency' => 
   array (
     '23f483b4cea1c23b4aa10269529664be7d73dbef' => 
     array (
       0 => '/home/j/jakovlevz/test/public_html/subdomains/images/themes/bootstrapdefault/template/menubar_categories.tpl',
-      1 => 1458476976,
+      1 => 1465801579,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_575e23944fd042_93169928 ($_smarty_tpl) {
+function content_575e744231d896_26980738 ($_smarty_tpl) {
 ?>
 <li class="dropdown">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo l10n('Albums');?>
@@ -48,10 +48,12 @@ $__foreach_cat_0_saved_local_item = $_smarty_tpl->tpl_vars['cat'];
 </span>
 <?php }
 if (!empty($_smarty_tpl->tpl_vars['cat']->value['icon_ts'])) {?>
-                <img title="<?php echo $_smarty_tpl->tpl_vars['cat']->value['icon_ts']['TITLE'];?>
+                <!-- <img title="<?php echo $_smarty_tpl->tpl_vars['cat']->value['icon_ts']['TITLE'];?>
 " src="<?php echo $_smarty_tpl->tpl_vars['ROOT_URL']->value;
 echo $_smarty_tpl->tpl_vars['themeconf']->value['icon_dir'];?>
-/recent<?php if ($_smarty_tpl->tpl_vars['cat']->value['icon_ts']['IS_CHILD_DATE']) {?>_by_child<?php }?>.png" class="icon" alt="(!)">
+/recent<?php if ($_smarty_tpl->tpl_vars['cat']->value['icon_ts']['IS_CHILD_DATE']) {?>_by_child<?php }?>.png" class="icon" alt="(!)"> -->
+                <span title="<?php echo $_smarty_tpl->tpl_vars['cat']->value['icon_ts']['TITLE'];?>
+" class="glyphicon glyphicon-picture in_menu"></span>
 <?php }?>
             </a>
         </li>

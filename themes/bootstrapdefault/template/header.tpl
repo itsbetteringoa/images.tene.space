@@ -136,7 +136,7 @@
 
 <body id="{$BODY_ID}">
 <!-- Share42 widget  -->
-    <div class="share42init" data-top1="100" data-top2="100" data-margin="0" data-url="http://images.tene.space" data-title="[tene.space.monkey] images from travel" data-image="http://images.tene.space/favicon/site_preview.jpg" data-description="BE THE CHANGE you wish to see in the world" data-path="http://images.tene.space/favicon/" data-zero-counter="0"></div> 
+    <div class="share42init" data-top1="160" data-top2="160" data-margin="0" data-url="http://images.tene.space" data-title="[tene.space.monkey] images from travel" data-image="http://images.tene.space/favicon/site_preview.jpg" data-description="BE THE CHANGE you wish to see in the world" data-path="http://images.tene.space/favicon/" data-zero-counter="0"></div> 
     <div id="the_page">
 {if $BODY_ID != 'thePicturePage' or $theme_config->picture_page == 'normal'}
         <!-- Bootstrap navbar, moved to the header as variables are missing in menubar.tpl, actual menus remain in menubar.tpl -->

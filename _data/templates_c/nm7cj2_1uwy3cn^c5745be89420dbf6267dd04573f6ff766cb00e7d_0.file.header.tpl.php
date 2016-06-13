@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-13 08:22:15
+/* Smarty version 3.1.29, created on 2016-06-13 11:52:18
   from "/home/j/jakovlevz/test/public_html/subdomains/images/themes/bootstrapdefault/template/header.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_575e4307818c16_05013477',
+  'unifunc' => 'content_575e74424a3c67_26037481',
   'file_dependency' => 
   array (
     'c5745be89420dbf6267dd04573f6ff766cb00e7d' => 
     array (
       0 => '/home/j/jakovlevz/test/public_html/subdomains/images/themes/bootstrapdefault/template/header.tpl',
-      1 => 1465795331,
+      1 => 1465803705,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_575e4307818c16_05013477 ($_smarty_tpl) {
+function content_575e74424a3c67_26037481 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_replace')) require_once '/home/j/jakovlevz/test/public_html/subdomains/images/include/smarty/libs/plugins/modifier.replace.php';
 ?>
 <!DOCTYPE html>
@@ -271,7 +271,7 @@ $_smarty_tpl->tpl_vars['elt'] = $__foreach_elt_2_saved_item;
 <body id="<?php echo $_smarty_tpl->tpl_vars['BODY_ID']->value;?>
 ">
 <!-- Share42 widget  -->
-    <div class="share42init" data-top1="100" data-top2="100" data-margin="0" data-url="http://images.tene.space" data-title="[tene.space.monkey] images from travel" data-image="http://images.tene.space/favicon/site_preview.jpg" data-description="BE THE CHANGE you wish to see in the world" data-path="http://images.tene.space/favicon/" data-zero-counter="0"></div> 
+    <div class="share42init" data-top1="160" data-top2="160" data-margin="0" data-url="http://images.tene.space" data-title="[tene.space.monkey] images from travel" data-image="http://images.tene.space/favicon/site_preview.jpg" data-description="BE THE CHANGE you wish to see in the world" data-path="http://images.tene.space/favicon/" data-zero-counter="0"></div> 
     <div id="the_page">
 <?php if ($_smarty_tpl->tpl_vars['BODY_ID']->value != 'thePicturePage' || $_smarty_tpl->tpl_vars['theme_config']->value->picture_page == 'normal') {?>
         <!-- Bootstrap navbar, moved to the header as variables are missing in menubar.tpl, actual menus remain in menubar.tpl -->

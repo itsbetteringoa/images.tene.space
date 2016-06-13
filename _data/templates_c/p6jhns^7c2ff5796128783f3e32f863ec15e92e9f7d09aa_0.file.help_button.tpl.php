@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-13 06:06:56
+/* Smarty version 3.1.29, created on 2016-06-13 11:49:21
   from "/home/j/jakovlevz/test/public_html/subdomains/images/plugins/ExtendedDescription/template/help_button.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_575e23509dc6b3_70843806',
+  'unifunc' => 'content_575e7391a2a697_03639576',
   'file_dependency' => 
   array (
     '7c2ff5796128783f3e32f863ec15e92e9f7d09aa' => 
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_575e23509dc6b3_70843806 ($_smarty_tpl) {
+function content_575e7391a2a697_03639576 ($_smarty_tpl) {
 echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['combine_script'][0][0]->func_combine_script(array('id'=>'core.scripts','load'=>'async','path'=>'themes/default/js/scripts.js'),$_smarty_tpl);?>
 
 <a href="<?php echo $_smarty_tpl->tpl_vars['ROOT_URL']->value;?>

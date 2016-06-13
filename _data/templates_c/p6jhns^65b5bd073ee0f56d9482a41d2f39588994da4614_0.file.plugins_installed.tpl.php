@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-13 06:06:56
+/* Smarty version 3.1.29, created on 2016-06-13 11:49:21
   from "/home/j/jakovlevz/test/public_html/subdomains/images/admin/themes/default/template/plugins_installed.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_575e2350bb2060_65582233',
+  'unifunc' => 'content_575e7391c28da3_12422754',
   'file_dependency' => 
   array (
     '65b5bd073ee0f56d9482a41d2f39588994da4614' => 
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_575e2350bb2060_65582233 ($_smarty_tpl) {
+function content_575e7391c28da3_12422754 ($_smarty_tpl) {
 if (!is_callable('smarty_function_counter')) require_once '/home/j/jakovlevz/test/public_html/subdomains/images/include/smarty/libs/plugins/function.counter.php';
 echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['combine_script'][0][0]->func_combine_script(array('id'=>'jquery.ajaxmanager','load'=>'footer','require'=>'jquery','path'=>'themes/default/js/plugins/jquery.ajaxmanager.js'),$_smarty_tpl);?>
 

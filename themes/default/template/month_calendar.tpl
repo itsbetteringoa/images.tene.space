@@ -25,6 +25,7 @@
 
 {if isset($chronology_calendar.month_view) || !empty($chronology_calendar.calendar_bars)}
 {assign var=c_date value=$calendar_date|explode:"-"}
+{if !is_numeric($c_date[0])}{$c_date[0]=2016}{/if}
 {if !empty($chronology_calendar.calendar_bars)} {$c_date[1]=1} {/if}
 {$def_date="`$c_date[0]`-`$c_date[1]`-01"|date_format:'%Y-%m-%d'}
 {$c_date[1]=$c_date[1]-1}
@@ -51,7 +52,7 @@
 			{if isset($day.URL)}
 				{$arr_cal[$ind].title=$day.NB_IMAGES|@translate_dec:'%d photo':'%d photos' }
 	 			{$arr_cal[$ind].start_d=$day.LABEL}
-	 			{$arr_cal[$ind].start_m=$day.month}
+	 			{$arr_cal[$ind].start_m=$day.month-1}
 	 			{$arr_cal[$ind].url=$day.URL}
 	 			{$arr_cal[$ind].src=$day.derivative}	 	
 	 			{$arr_cal[$ind].alt=$day.alt}
@@ -90,8 +91,8 @@
     ];
     $('#calendar').fullCalendar({
         header: {
-            left: '',
-            center: 'title',
+            left:  'title',
+            center: '',
             right: ''
         }, 
 

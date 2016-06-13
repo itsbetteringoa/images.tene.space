@@ -8,7 +8,7 @@
         <div class="navbar-header">
             <div class="navbar-brand">{$SECTION_TITLE}{$LEVEL_SEPARATOR}<a href>{$current.TITLE}</a> [{$PHOTO}]</div>
         </div>
-        <div class="navbar-right">
+        <div class="navbar-right glyph_bar">
             <ul class="nav navbar-nav">
 {if isset($current.unique_derivatives) && count($current.unique_derivatives)>1}
 {footer_script require='jquery'}{strip}
@@ -251,12 +251,20 @@
 {if isset($COMMENT_IMG)}
         <h4 class="imageComment">{$COMMENT_IMG}</h4>
 {/if}
+<div style="float: left;">
 {if $display_info.visits}
         <div id="visits">
             <b>{'Visits'|@translate}</b>
             <span class="count">{$INFO_VISITS}</span>
         </div>
 {/if}
+{if $DOWNLOAD_COUNTER}
+    <div id="downloads">
+        <b>Downloads</b>
+        <span style="margin-left: 20px;">{$DOWNLOAD_COUNTER}</span>
+    </div>
+{/if}
+</div>
         <div id="rating">
             <dl class="dl-horizontal">
                 <dt>{'Average rating'|@translate} <span id="ratingCount">{if $rate_summary.count}({$rate_summary.count|@translate_dec:'%d rate':'%d rates'}){/if}</span></dt>
@@ -309,6 +317,7 @@
 </div>
 
 {include file="http_scheme.tpl"}
+<!--
 {if $theme_config->social_enabled}
 <div class="container">
     <section id="share">
@@ -333,6 +342,7 @@
     </section>
 </div>
 {/if}
+-->
 
 {if isset($comment_add) || $COMMENT_COUNT > 0}
 <a name="comments"></a>

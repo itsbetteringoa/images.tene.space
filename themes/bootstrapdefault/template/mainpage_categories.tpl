@@ -11,7 +11,10 @@
 {include file="grid_classes.tpl" width=260 height=180}
 <div class="col-outer {if $smarty.cookies.view == 'list'}col-lg-12 col-md-12 col-sm-12 col-xs-12{else}{$col_class}{/if}" data-grid-classes="{$col_class}">
     <div class="col-inner">
-        <Div class="cat_inf">
+        
+        <a class="col-thumbnail" href="{$cat.URL}">
+           <div class="mp_thumb">
+           <Div class="cat_inf">
             <p>{$cat.CAPTION_NB_IMAGES}</p>
         {if !empty($cat.icon_ts)}
                 <!-- <img title="{$cat.icon_ts.TITLE}" src="{$ROOT_URL}{$themeconf.icon_dir}/recent{if $cat.icon_ts.IS_CHILD_DATE}_by_child{/if}.png" alt="(!)"> -->
@@ -19,13 +22,13 @@
                     <span title="{$cat.icon_ts.TITLE}" class="glyphicon glyphicon-picture"></span>        
         {/if}
         </Div>
-        <a class="col-thumbnail" href="{$cat.URL}">
             <div class="placeholder" style="background: url({$ROOT_URL}{$themeconf.icon_dir}/img_small.png) no-repeat center">
                 <img {strip}{if $derivative->is_cached()}src="{$derivative->get_url()}"{else}src="{$ROOT_URL}themes/bootstrapdefault/img/transparent.png"
                     data-src="{$derivative->get_url()}"{/if}
                     alt="{$cat.TN_ALT}"
                     title="{$cat.NAME|@replace:'"':' '|@strip_tags:false} - {'display this album'|@translate}">{/strip}
             </div>
+        </div>
         </a>
         <div class="caption">
             <h3 class="title">

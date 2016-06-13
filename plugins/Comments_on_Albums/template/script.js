@@ -48,24 +48,24 @@
       comments_button.click(commentsToggle);
       commentsswitcher.click(commentsToggle);
 
-      jQuery(window).scroll(function (event) {
-        if (comments_top_offset==0) return;
+      // jQuery(window).scroll(function (event) {
+      //   if (comments_top_offset==0) return;
 
-        var y = jQuery(this).scrollTop();
+      //   var y = jQuery(this).scrollTop();
 
-        if (y >= comments_top_offset) {
-          comments_add.css({
-            'position': 'absolute',
-            'top': Math.min(y-comments.offset().top+10, comments.height()-comments_add.height())
-          });
-        }
-        else {
-          comments_add.css({
-            'position': 'static',
-            'top': 0
-          });
-        }
-      });
+      //   if (y >= comments_top_offset) {
+      //     comments_add.css({
+      //       'position': 'absolute',
+      //       'top': Math.min(y-comments.offset().top+10, comments.height()-comments_add.height())
+      //     });
+      //   }
+      //   else {
+      //     comments_add.css({
+      //       'position': 'static',
+      //       'top': 0
+      //     });
+      //   }
+      // });
 
       if (comments_add.is(":visible")) {
         comments_top_offset = comments_add.offset().top - parseFloat(comments_add.css('marginTop').replace(/auto/, 0));
