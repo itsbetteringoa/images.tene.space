@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-13 06:08:04
+/* Smarty version 3.1.29, created on 2016-06-13 08:22:15
   from "/home/j/jakovlevz/test/public_html/subdomains/images/themes/bootstrapdefault/template/header.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_575e239463dbf4_66788346',
+  'unifunc' => 'content_575e4307818c16_05013477',
   'file_dependency' => 
   array (
     'c5745be89420dbf6267dd04573f6ff766cb00e7d' => 
     array (
       0 => '/home/j/jakovlevz/test/public_html/subdomains/images/themes/bootstrapdefault/template/header.tpl',
-      1 => 1465723769,
+      1 => 1465795331,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_575e239463dbf4_66788346 ($_smarty_tpl) {
+function content_575e4307818c16_05013477 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_replace')) require_once '/home/j/jakovlevz/test/public_html/subdomains/images/include/smarty/libs/plugins/modifier.replace.php';
 ?>
 <!DOCTYPE html>
@@ -104,6 +104,30 @@ echo $_smarty_tpl->tpl_vars['GALLERY_TITLE']->value;?>
 <meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png">
 <meta name="msapplication-config" content="/favicon/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
+<meta property="og:image" content="http://images.tene.space/favicon/site_preview.jpg" />
+
+
+<?php echo '<script'; ?>
+ type="text/javascript">
+    reformal_wdg_w    = "713";
+                    reformal_wdg_h    = "460";
+                    reformal_wdg_domain    = "spacemonkey";
+                    reformal_wdg_mode    = 5;
+                    reformal_wdg_title   = "Ideas and suggestions";
+                    reformal_wdg_ltitle  = "Got ideas? Share!...";
+                    reformal_wdg_lfont   = "Verdana, Geneva, sans-serif";
+                    reformal_wdg_lsize   = "12px";
+                    reformal_wdg_color   = "#0033ff";
+                    reformal_wdg_bcolor  = "#516683";
+                    reformal_wdg_tcolor  = "#FFFFFF";
+                    reformal_wdg_align   = "";
+                    reformal_wdg_waction = 0;
+                    reformal_wdg_vcolor  = "#9FCE54";
+                    reformal_wdg_cmline  = "#E0E0E0";
+                    reformal_wdg_glcolor  = "#105895";
+                    reformal_wdg_tbcolor  = "#FFFFFF";
+<?php echo '</script'; ?>
+>
 
     <!-- <link rel="shortcut icon" type="image/x-icon" href="<?php echo $_smarty_tpl->tpl_vars['ROOT_URL']->value;
 echo $_smarty_tpl->tpl_vars['themeconf']->value['icon_dir'];?>
@@ -208,6 +232,8 @@ if (!empty($_smarty_tpl->tpl_vars['page_refresh']->value)) {?>
 <?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['combine_script'][0][0]->func_combine_script(array('id'=>'amoment','require'=>'jquery','path'=>"themes/bootstrapdefault/js/moment.min.js"),$_smarty_tpl);?>
 
 
+<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['combine_script'][0][0]->func_combine_script(array('id'=>'share42','require'=>'jquery','path'=>"themes/bootstrapdefault/js/share42.js"),$_smarty_tpl);?>
+
 
 <?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['get_combined_scripts'][0][0]->func_get_combined_scripts(array('load'=>'header'),$_smarty_tpl);?>
 
@@ -244,6 +270,8 @@ $_smarty_tpl->tpl_vars['elt'] = $__foreach_elt_2_saved_item;
 
 <body id="<?php echo $_smarty_tpl->tpl_vars['BODY_ID']->value;?>
 ">
+<!-- Share42 widget  -->
+    <div class="share42init" data-top1="100" data-top2="100" data-margin="0" data-url="http://images.tene.space" data-title="[tene.space.monkey] images from travel" data-image="http://images.tene.space/favicon/site_preview.jpg" data-description="BE THE CHANGE you wish to see in the world" data-path="http://images.tene.space/favicon/" data-zero-counter="0"></div> 
     <div id="the_page">
 <?php if ($_smarty_tpl->tpl_vars['BODY_ID']->value != 'thePicturePage' || $_smarty_tpl->tpl_vars['theme_config']->value->picture_page == 'normal') {?>
         <!-- Bootstrap navbar, moved to the header as variables are missing in menubar.tpl, actual menus remain in menubar.tpl -->

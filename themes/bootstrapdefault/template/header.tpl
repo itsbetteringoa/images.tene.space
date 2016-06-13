@@ -42,6 +42,28 @@
 <meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png">
 <meta name="msapplication-config" content="/favicon/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
+<meta property="og:image" content="http://images.tene.space/favicon/site_preview.jpg" />
+
+
+<script type="text/javascript">
+    reformal_wdg_w    = "713";
+                    reformal_wdg_h    = "460";
+                    reformal_wdg_domain    = "spacemonkey";
+                    reformal_wdg_mode    = 5;
+                    reformal_wdg_title   = "Ideas and suggestions";
+                    reformal_wdg_ltitle  = "Got ideas? Share!...";
+                    reformal_wdg_lfont   = "Verdana, Geneva, sans-serif";
+                    reformal_wdg_lsize   = "12px";
+                    reformal_wdg_color   = "#0033ff";
+                    reformal_wdg_bcolor  = "#516683";
+                    reformal_wdg_tcolor  = "#FFFFFF";
+                    reformal_wdg_align   = "";
+                    reformal_wdg_waction = 0;
+                    reformal_wdg_vcolor  = "#9FCE54";
+                    reformal_wdg_cmline  = "#E0E0E0";
+                    reformal_wdg_glcolor  = "#105895";
+                    reformal_wdg_tbcolor  = "#FFFFFF";
+</script>
 
     <!-- <link rel="shortcut icon" type="image/x-icon" href="{$ROOT_URL}{$themeconf.icon_dir}/favicon.ico">; -->
     <link rel="start" title="{'Home'|@translate}" href="{$U_HOME}" >
@@ -97,6 +119,7 @@
 {combine_script id=$themeconf.name require='bootstrap' path="themes/bootstrapdefault/js/theme.js"}
 {combine_script id='amoment' require='jquery' path="themes/bootstrapdefault/js/moment.min.js"}
 
+{combine_script id='share42' require='jquery' path="themes/bootstrapdefault/js/share42.js"}
 
 {get_combined_scripts load='header'}
 
@@ -112,6 +135,8 @@
 </head>
 
 <body id="{$BODY_ID}">
+<!-- Share42 widget  -->
+    <div class="share42init" data-top1="100" data-top2="100" data-margin="0" data-url="http://images.tene.space" data-title="[tene.space.monkey] images from travel" data-image="http://images.tene.space/favicon/site_preview.jpg" data-description="BE THE CHANGE you wish to see in the world" data-path="http://images.tene.space/favicon/" data-zero-counter="0"></div> 
     <div id="the_page">
 {if $BODY_ID != 'thePicturePage' or $theme_config->picture_page == 'normal'}
         <!-- Bootstrap navbar, moved to the header as variables are missing in menubar.tpl, actual menus remain in menubar.tpl -->

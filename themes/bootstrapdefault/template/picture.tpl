@@ -1,5 +1,5 @@
 <!-- Start of picture.tpl -->
-{combine_css path="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"}
+{* combine_css url="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" *}
 
 {if !empty($PLUGIN_PICTURE_BEFORE)}{$PLUGIN_PICTURE_BEFORE}{/if}
 
