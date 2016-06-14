@@ -6,6 +6,7 @@
 
 <img {if $current.selected_derivative->is_cached()}src="{$current.selected_derivative->get_url()}" {$current.selected_derivative->get_size_htm()}{else}src="{$ROOT_URL}themes/bootstrapdefault/img/transparent.png" data-src="{$current.selected_derivative->get_url()}"{/if} alt="{$ALT_IMG}" id="theMainImage" usemap="#map{$current.selected_derivative->get_type()}" title="{if isset($COMMENT_IMG)}{$COMMENT_IMG|@strip_tags:false|@replace:'"':' '}{else}{$current.TITLE_ESC} - {$ALT_IMG}{/if}">
 
+<!-- 
 {foreach from=$current.unique_derivatives item=derivative key=derivative_type}{strip}
     <map name="map{$derivative->get_type()}">
         {assign var='size' value=$derivative->get_size()}
@@ -18,3 +19,4 @@
         {/if}
     </map>
 {/strip}{/foreach}
+-->

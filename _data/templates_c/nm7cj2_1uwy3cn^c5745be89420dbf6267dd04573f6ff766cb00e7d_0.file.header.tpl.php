@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-13 11:52:18
+/* Smarty version 3.1.29, created on 2016-06-14 12:38:58
   from "/home/j/jakovlevz/test/public_html/subdomains/images/themes/bootstrapdefault/template/header.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_575e74424a3c67_26037481',
+  'unifunc' => 'content_575fd0b227ece8_43651559',
   'file_dependency' => 
   array (
     'c5745be89420dbf6267dd04573f6ff766cb00e7d' => 
     array (
       0 => '/home/j/jakovlevz/test/public_html/subdomains/images/themes/bootstrapdefault/template/header.tpl',
-      1 => 1465803705,
+      1 => 1465897090,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_575e74424a3c67_26037481 ($_smarty_tpl) {
+function content_575fd0b227ece8_43651559 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_replace')) require_once '/home/j/jakovlevz/test/public_html/subdomains/images/include/smarty/libs/plugins/modifier.replace.php';
 ?>
 <!DOCTYPE html>
@@ -105,7 +105,7 @@ echo $_smarty_tpl->tpl_vars['GALLERY_TITLE']->value;?>
 <meta name="msapplication-config" content="/favicon/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 <meta property="og:image" content="http://images.tene.space/favicon/site_preview.jpg" />
-
+<meta content="width=device-width, initial-scale=1, maximum-scale=3" name="viewport">
 
 <?php echo '<script'; ?>
  type="text/javascript">
@@ -231,7 +231,16 @@ if (!empty($_smarty_tpl->tpl_vars['page_refresh']->value)) {?>
 
 <?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['combine_script'][0][0]->func_combine_script(array('id'=>'amoment','require'=>'jquery','path'=>"themes/bootstrapdefault/js/moment.min.js"),$_smarty_tpl);?>
 
+<!--
+<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['combine_script'][0][0]->func_combine_script(array('id'=>'overthrow-detect','require'=>'jquery','path'=>"themes/bootstrapdefault/js/overthrow-detect.js"),$_smarty_tpl);?>
 
+<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['combine_script'][0][0]->func_combine_script(array('id'=>'overthrow-polyfill','require'=>'jquery','path'=>"themes/bootstrapdefault/js/overthrow-polyfill.js"),$_smarty_tpl);?>
+
+<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['combine_script'][0][0]->func_combine_script(array('id'=>'overthrow-toss','require'=>'jquery','path'=>"themes/bootstrapdefault/js/overthrow-toss.js"),$_smarty_tpl);?>
+
+<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['combine_script'][0][0]->func_combine_script(array('id'=>'overthrow-init','require'=>'jquery','path'=>"themes/bootstrapdefault/js/overthrow-init.js"),$_smarty_tpl);?>
+
+-->
 <?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['combine_script'][0][0]->func_combine_script(array('id'=>'share42','require'=>'jquery','path'=>"themes/bootstrapdefault/js/share42.js"),$_smarty_tpl);?>
 
 
@@ -269,9 +278,10 @@ $_smarty_tpl->tpl_vars['elt'] = $__foreach_elt_2_saved_item;
 </head>
 
 <body id="<?php echo $_smarty_tpl->tpl_vars['BODY_ID']->value;?>
-">
+"  >
 <!-- Share42 widget  -->
-    <div class="share42init" data-top1="160" data-top2="160" data-margin="0" data-url="http://images.tene.space" data-title="[tene.space.monkey] images from travel" data-image="http://images.tene.space/favicon/site_preview.jpg" data-description="BE THE CHANGE you wish to see in the world" data-path="http://images.tene.space/favicon/" data-zero-counter="0"></div> 
+    <div class="share42init" data-top1="80" data-top2="80" data-margin="0" data-url="http://images.tene.space" data-title="[tene.space.monkey] images from travel" data-image="http://images.tene.space/favicon/site_preview.jpg" data-description="BE THE CHANGE you wish to see in the world" data-path="http://images.tene.space/favicon/" data-zero-counter="0"></div> 
+
     <div id="the_page">
 <?php if ($_smarty_tpl->tpl_vars['BODY_ID']->value != 'thePicturePage' || $_smarty_tpl->tpl_vars['theme_config']->value->picture_page == 'normal') {?>
         <!-- Bootstrap navbar, moved to the header as variables are missing in menubar.tpl, actual menus remain in menubar.tpl -->

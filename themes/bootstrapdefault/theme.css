@@ -30,24 +30,23 @@
 }
 .mp_thumb {
   position: relative;
-   margin-right: 15px !important;
+   
 }
-.calendarViews strong {
-  float: left;
+ .share42init span{    
+    -webkit-backface-visibility:hidden; /*Most Important*/
+}
+.calendarViews strong {  
   margin-right: 20px;
   margin-top: 5px;
+  float: left;
 }
-.calendarViews ul {
-
-    border: 1px solid;
-    border-radius: 5px;
-    clear: both;
+.col-outer.col-lg-3.col-md-4.col-sm-6.col-xs-12 .caption {
+  float: left !important;
 }
 .calendarViews {
-  height: 70px !important;
-    min-height: 70px !important;
-    clear: both;
     float: left;
+    height: 50px;
+    width: 58px;
 }
 .calendarViews ul li a {
   padding: 5px;
@@ -57,13 +56,14 @@
 }
 .calendarBar {
   float: right;
-    clear: right;
+  margin-bottom: 20px;
 }
 .calendarBar a {
     padding: 7px;
 }
 div#content {
   clear: both;
+  padding-left: 20px;
 }
 a.navbar-brand span {
     top: -5px;
@@ -95,11 +95,25 @@ table.fc-year-main-table.fc-border-separate a.fc-event {
   top: 0px !important;
   margin-bottom: 0px !important;
 }
-@media screen and (max-width: 321px) {
-  .navbar-brand {
+.container {
+  margin-left: 21px !important;
+}
+@media screen and (max-height: : 380px) {
+    #share42 {
+      top: 20px !important;
+    }
+  }
+@media screen and (max-width: 380px) {
+  .navbar-main .navbar-brand {
     margin-left: -19px;
       padding: 11px;
   }
+  a.navbar-brand span {
+    font-size: 0.9em;
+  }
+  .calendarBar {      
+      clear: both;
+   }
 }
 .fc-toolbar .fc-left {
   margin-left: 20px;
@@ -107,17 +121,56 @@ table.fc-year-main-table.fc-border-separate a.fc-event {
 #important-info #visits {
   float: none !important;
 }
+.navbar-right.glyph_bar, .bs-callout {
+    margin-left: 15px !important;
+  }
+.calendarViews ul li.dropdown ul li {
+  z-index: 44;
+  overflow: overlay !important;
+}
+.fc table {
+  z-index: -1 !important;
+}
+.calendarViews ul li.dropdown {
+ position: absolute;
+    z-index: 44;
+    border: 1px solid;
+    border-radius: 5px;
+    background: white;
+        color: black;
+    height: auto;
+    width: 136px;
+}  
+#menubar-navbar-collapse {
+  margin-left: 0px !important;
+}
+#the_page .container #comments {
+  margin-left: 20px !important;
+}
 @media screen and (max-width: 780px) {
+   .caret{
+    border-top: 4px solid;
+  }
    .calendarBar {
       margin-bottom: 15px;
+
+   }
+   .calender_container #content {
+    padding-left: 0px !important;
    }
    .calendarViews ul {
     position: relative !important;
-    clear: both;
     margin-left: 0px;
+    float: right;
+    margin-top: 1px;
+    z-index: 11;
+   }
+   .mp_thumb {
+    margin-right: 15px !important;
    }
    #calendar {
     min-width: 980px;
+    clear: both;
    }
    .content-grid .col-inner .col-thumbnail {
     float: left !important;
@@ -125,8 +178,11 @@ table.fc-year-main-table.fc-border-separate a.fc-event {
    .calender_container.container {
     overflow-y: scroll;
    }
-   .container {
-    margin-left: 15px !important;
+   .navbar.navbar-default.navbar-main .container {
+    margin-left: 7px !important;
+   }
+   .navbar-default .container {
+    margin-left: 5px ;
     
   }  
   .navbar-right {
@@ -141,9 +197,13 @@ table.fc-year-main-table.fc-border-separate a.fc-event {
   }
   .glyph_bar .open .dropdown-menu {
     position: absolute !important;
+    background: white;
   }
   .navbar-brand {
     height: auto !important;
+  }
+  .navbar-right.glyph_bar {
+    clear: both;
   }
   
   .caption {
@@ -168,12 +228,35 @@ table.fc-year-main-table.fc-border-separate a.fc-event {
   .col-thumbnail {
     margin-top: 0px !important;
   }
-  .navbar-nav .open .dropdown-menu {
+  .calendarViews .navbar-nav .open .dropdown-menu {
     background-color: white !important;
+    color: black;
+    position: absolute !important;
+    z-index: 1 !important;
+    overflow: visible;
+    border: 1px solid;
   }
+  .container.calender_container {
+  margin-left: 25px !important;
+  overflow: visible;
+  overflow-y: scroll !important;
+}
 }
 
+.fc-view, .fc-view > table {
+  z-index: inherit !important;
+}
+.fc-view-container {
+  z-index: 999999 !important;
+}
 
+/* Overthrow CSS:
+   Enable overflow: auto on elements with overthrow class when html element has overthrow class too */
+.overthrow-enabled .overthrow {
+    overflow: auto;
+    overflow-y: scroll !important;
+    -webkit-overflow-scrolling: touch;
+}
 .bs-callout {
 padding: 20px;
 margin: 0px 0 20px;
@@ -414,6 +497,21 @@ fieldset[disabled] .html-radios-inline label {
 .form-horizontal .html-radios-inline {
   padding-top: 6px;
 }
+.flag_counter {
+  position: fixed;
+  bottom: -16px;
+  right: -80px;
+  display: block;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-backface-visibility: hidden;
+}
+.flag_counter:hover {
+    right: 0px;
+}
+
 #content .col-outer {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
@@ -429,8 +527,7 @@ fieldset[disabled] .html-radios-inline label {
   margin-bottom: 10px;
 }
 .content-grid .col-inner .col-thumbnail {
-  float: none;
-  margin-right: 0px;
+  float: left;
 }
 .content-grid .col-inner .caption h3.title {
   position: relative;

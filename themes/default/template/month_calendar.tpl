@@ -22,12 +22,39 @@
 {/foreach}
 {/if}
 
+{if isset($chronology_calendar.calendar_bars[0].type)}
+	<div class="calendarBar">
+	{foreach from=$chronology_calendar.calendar_bars item=bar}
+	
+		{if isset($bar.previous)}
+			<div style="float:left;margin-right:5px">&laquo; <a class = "btn btn-default" role="button" href="{$bar.previous.URL}">{$bar.previous.LABEL}</a></div>
+		{/if}
+		{if isset($bar.next)}
+			<div style="float:right;margin-left:5px"><a class = "btn btn-default" role="button"  href="{$bar.next.URL}">{$bar.next.LABEL}</a> &raquo;</div>
+		{/if}
+		{if empty($bar.items)}
+			&nbsp;
+		{else}
+			{foreach from=$bar.items item=item}
+			{if !isset($item.URL)}
+			<span class="calItem">{$item.LABEL} {$bar.HEAD_LABEL}</span>
+			{else}
+			<a class = "btn btn-default" role="button"  {if isset($item.NB_IMAGES)} title="{$item.NB_IMAGES|@translate_dec:'%d photo':'%d photos'}"{/if} href="{$item.URL}">{$item.LABEL} {$bar.HEAD_LABEL}</a>
+			{/if}
+			{/foreach}
+		{/if}
+	
+	{/foreach}	
+	</div>
+{/if}
+
 
 {if isset($chronology_calendar.month_view) || !empty($chronology_calendar.calendar_bars)}
 {assign var=c_date value=$calendar_date|explode:"-"}
-{if !is_numeric($c_date[0])}{$c_date[0]=2016}{/if}
+{if !is_numeric($c_date[0])}{$c_date[0]=$chronology_calendar.calendar_bars[0].HEAD_LABEL}{/if}
 {if !empty($chronology_calendar.calendar_bars)} {$c_date[1]=1} {/if}
 {$def_date="`$c_date[0]`-`$c_date[1]`-01"|date_format:'%Y-%m-%d'}
+
 {$c_date[1]=$c_date[1]-1}
 {$ind=0}
 {if isset($chronology_calendar.month_view)}
@@ -46,7 +73,7 @@
 	 {/foreach}
 	{/foreach}
 	{$img_width=130}
-{else}
+{elseif !isset($chronology_calendar.calendar_bars[0].type)}
 	{foreach from=$chronology_calendar.calendar_bars item=bar}
 		{foreach from=$bar.items item=day}		
 			{if isset($day.URL)}
@@ -63,15 +90,17 @@
 {/foreach}
 	{$img_width=50}
 {/if}
-
+	<div id="date_output" style="clear: both;"></div>
 <div id='calendar'></div>
-{footer_script}{literal}$(document).ready(function(){
+{if !isset($chronology_calendar.calendar_bars[0].type) || isset($chronology_calendar.month_view)}
+{footer_script}{literal}$(function(){
   {/literal}
   var date = new Date({$c_date[0]},{$c_date[1]}{literal},1);
     var d = date.getDate();
     var m = date.getMonth();
     var y = date.getFullYear();
-
+//$('#date_output').html(date+'<br/>'+y+'<br/>'+d+'<br/>'+m);
+  
     var events_array = [
     {/literal}
 
@@ -120,6 +149,7 @@
         })
     });
     {/literal}{/footer_script}
+ {/if}
 <!-- 
  <thead>
  <tr>

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-13 11:58:03
+/* Smarty version 3.1.29, created on 2016-06-14 11:30:49
   from "/home/j/jakovlevz/test/public_html/subdomains/images/themes/bootstrapdefault/template/index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_575e759bdfde15_51919255',
+  'unifunc' => 'content_575fc0b990e167_75656628',
   'file_dependency' => 
   array (
     '4f8a09f54621b1eded9c1542ee84b130b8dc7c85' => 
     array (
       0 => '/home/j/jakovlevz/test/public_html/subdomains/images/themes/bootstrapdefault/template/index.tpl',
-      1 => 1465808274,
+      1 => 1465893046,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:navigation_bar.tpl' => 2,
   ),
 ),false)) {
-function content_575e759bdfde15_51919255 ($_smarty_tpl) {
+function content_575fc0b990e167_75656628 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_regex_replace')) require_once '/home/j/jakovlevz/test/public_html/subdomains/images/include/smarty/libs/plugins/modifier.regex_replace.php';
 ?>
 <!-- Start of index.tpl -->
@@ -259,7 +259,6 @@ if ((!empty($_smarty_tpl->tpl_vars['CATEGORIES']->value) && !isset($_smarty_tpl-
 echo $_smarty_tpl->tpl_vars['PLUGIN_INDEX_CONTENT_BEGIN']->value;
 }?>
 
-
 <?php if (isset($_smarty_tpl->tpl_vars['chronology_views']->value)) {?>
     <div class="calendarViews"><strong><?php echo l10n('View');?>
 :</strong>
@@ -338,7 +337,7 @@ $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, $_smarty_tpl->tpl_
 
 <?php if (!empty($_smarty_tpl->tpl_vars['CONTENT_DESCRIPTION']->value)) {?>
     <div class="bs-callout bs-callout-info">
-        <?php echo nl2br($_smarty_tpl->tpl_vars['CONTENT_DESCRIPTION']->value);?>
+        <?php echo $_smarty_tpl->tpl_vars['CONTENT_DESCRIPTION']->value;?>
 
     </div>
 <?php }?>
@@ -469,11 +468,13 @@ $_smarty_tpl->tpl_vars['tag'] = $__foreach_res_loop_6_saved_item;
 </div>
 <?php }?>
 
+<?php if (!isset($_smarty_tpl->tpl_vars['chronology_calendar']->value['calendar_bars'][0]['type'])) {?>
 <div class="container">
 <?php if (!empty($_smarty_tpl->tpl_vars['PLUGIN_INDEX_CONTENT_END']->value)) {
 echo $_smarty_tpl->tpl_vars['PLUGIN_INDEX_CONTENT_END']->value;
 }?>
 </div>
+<?php }?>
 
 <?php if (!empty($_smarty_tpl->tpl_vars['PLUGIN_INDEX_CONTENT_AFTER']->value)) {
 echo $_smarty_tpl->tpl_vars['PLUGIN_INDEX_CONTENT_AFTER']->value;

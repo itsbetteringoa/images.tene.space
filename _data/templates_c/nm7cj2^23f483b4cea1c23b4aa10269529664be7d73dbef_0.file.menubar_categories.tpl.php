@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-13 11:52:18
+/* Smarty version 3.1.29, created on 2016-06-14 10:16:03
   from "/home/j/jakovlevz/test/public_html/subdomains/images/themes/bootstrapdefault/template/menubar_categories.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_575e744231d896_26980738',
+  'unifunc' => 'content_575faf330de405_09821890',
   'file_dependency' => 
   array (
     '23f483b4cea1c23b4aa10269529664be7d73dbef' => 
     array (
       0 => '/home/j/jakovlevz/test/public_html/subdomains/images/themes/bootstrapdefault/template/menubar_categories.tpl',
-      1 => 1465801579,
+      1 => 1465888545,
       2 => 'file',
     ),
   ),
@@ -19,12 +19,12 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_575e744231d896_26980738 ($_smarty_tpl) {
+function content_575faf330de405_09821890 ($_smarty_tpl) {
 ?>
 <li class="dropdown">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo l10n('Albums');?>
  <span class="caret"></span></a>
-    <ul class="dropdown-menu dropdown-menu-scrollable" role="menu">
+    <ul class="dropdown-menu dropdown-menu-scrollable overthrow" role="menu">
 <?php $_smarty_tpl->tpl_vars['ref_level'] = new Smarty_Variable(0, null);
 $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'ref_level', 0);
 $_from = $_smarty_tpl->tpl_vars['block']->value->data['MENU_CATEGORIES'];

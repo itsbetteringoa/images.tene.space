@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-13 11:52:19
+/* Smarty version 3.1.29, created on 2016-06-14 11:35:58
   from "/home/j/jakovlevz/test/public_html/subdomains/images/themes/bootstrapdefault/template/footer.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_575e744352fbb7_95450629',
+  'unifunc' => 'content_575fc1eedfd105_66351516',
   'file_dependency' => 
   array (
     '1e5ded44fb4823e4a232cfcc8cba8b8b82125ab3' => 
     array (
       0 => '/home/j/jakovlevz/test/public_html/subdomains/images/themes/bootstrapdefault/template/footer.tpl',
-      1 => 1465793262,
+      1 => 1465893336,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_575e744352fbb7_95450629 ($_smarty_tpl) {
+function content_575fc1eedfd105_66351516 ($_smarty_tpl) {
 ?>
         <!-- Start of footer.tpl -->
         <div class="copyright container">
@@ -43,7 +43,8 @@ function content_575e744352fbb7_95450629 ($_smarty_tpl) {
                 | <a href="<?php echo $_smarty_tpl->tpl_vars['CONTACT_FORM_PUBLIC']->value;?>
 "><?php echo l10n('Contact webmaster');?>
 </a> -->
-
+ 
+<!-- 
 <?php if (isset($_smarty_tpl->tpl_vars['TOGGLE_MOBILE_THEME_URL']->value)) {?>
                 | <?php echo l10n('View in');?>
  : <a href="<?php echo $_smarty_tpl->tpl_vars['TOGGLE_MOBILE_THEME_URL']->value;?>
@@ -51,6 +52,7 @@ function content_575e744352fbb7_95450629 ($_smarty_tpl) {
 </a> | <b><?php echo l10n('Desktop');?>
 </b>
 <?php }?>
+-->
 
 <?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['get_combined_scripts'][0][0]->func_get_combined_scripts(array('load'=>'footer'),$_smarty_tpl);?>
 
@@ -84,8 +86,10 @@ $_smarty_tpl->tpl_vars['v'] = $__foreach_v_0_saved_item;
         </div>
 <?php }?>
     </div>
-     
-    
+     <div class="flag_counter">
+<a href="http://info.flagcounter.com/Cbbk"><img src="http://s06.flagcounter.com/count2/Cbbk/bg_FFFFFF/txt_000000/border_CCCCCC/columns_1/maxflags_5/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" target=
+_blank" border="0" style="display: none;"></a>     
+    </div>
     
 </body>
 </html><?php }

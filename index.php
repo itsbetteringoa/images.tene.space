@@ -299,9 +299,11 @@ if ( empty($page['is_external']) or !$page['is_external'] )
   // category comment
   if ($page['start']==0 and !isset($page['chronology_field']) and !empty($page['comment']) )
   {
-    $template->assign('CONTENT_DESCRIPTION', $page['comment'] );
+    $str_br=nl2br($page['comment']);
+    //var_dump(str_replace("<br />", "</p><p>", $str_br )); die();
+    $template->assign('CONTENT_DESCRIPTION', '<p>'.str_replace("<br />", "</p><p>", $str_br ).'</p>' );
   }
-
+ 
   if ( isset($page['category']['count_categories']) and $page['category']['count_categories']==0 )
   {// count_categories might be computed by menubar - if the case unassign flat link if no sub albums
     $template->clear_assign('U_MODE_FLAT');
@@ -369,4 +371,25 @@ $template->pparse('index');
 //------------------------------------------------------------ log informations
 pwg_log();
 include(PHPWG_ROOT_PATH.'include/page_tail.php');
+
+/*=====================================
+=            TENEs changes            =
+=====================================*/
+function nl2p($string, $line_breaks = true, $xml = true) {
+
+$string = str_replace(array('<p>', '</p>', '<br>', '<br />'), '', $string);
+
+// It is conceivable that people might still want single line-breaks
+// without breaking into a new paragraph.
+if ($line_breaks == true)
+    return '<p>'.preg_replace(array("/([\n]{2,})/i", "/([^>])\n([^<])/i"), array("</p>\n<p>", '$1<br'.($xml == true ? ' /' : '').'>$2'), trim($string)).'</p>';
+else 
+    return '<p>'.preg_replace(
+    array("/([\n]{2,})/i", "/([\r\n]{3,})/i","/([^>])\n([^<])/i"),
+    array("</p>\n<p>", "</p>\n<p>", '$1<br'.($xml == true ? ' /' : '').'>$2'),
+
+    trim($string)).'</p>'; 
+}
+/*=====  End of TENEs changes  ======*/
+
 ?>
