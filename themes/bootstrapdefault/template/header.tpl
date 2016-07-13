@@ -28,14 +28,14 @@
 <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png">
 <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon-180x180.png">
-<link rel="icon" type="image/png" href="/favicon//favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/favicon//favicon-194x194.png" sizes="194x194">
-<link rel="icon" type="image/png" href="/favicon//favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon/favicon-194x194.png" sizes="194x194">
+<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
 <link rel="icon" type="image/png" href="/favicon/android-chrome-192x192.png" sizes="192x192">
-<link rel="icon" type="image/png" href="/favicon//favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
 <link rel="manifest" href="/favicon/manifest.json">
 <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
-<link rel="shortcut icon" href="/favicon//favicon.ico">
+<link rel="shortcut icon" href="/favicon/favicon.ico">
 <meta name="apple-mobile-web-app-title" content="tene.space/monkey">
 <meta name="application-name" content="tene.space/monkey">
 <meta name="msapplication-TileColor" content="#da532c">
@@ -43,7 +43,7 @@
 <meta name="msapplication-config" content="/favicon/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 <meta property="og:image" content="http://images.tene.space/favicon/site_preview.jpg" />
-
+<meta content="width=device-width, initial-scale=1, maximum-scale=3" name="viewport">
 
 <script type="text/javascript">
     reformal_wdg_w    = "713";
@@ -118,8 +118,15 @@
 {combine_script id='bootstrap' require='jquery' path="themes/bootstrapdefault/bootstrap/dist/js/bootstrap.min.js"}
 {combine_script id=$themeconf.name require='bootstrap' path="themes/bootstrapdefault/js/theme.js"}
 {combine_script id='amoment' require='jquery' path="themes/bootstrapdefault/js/moment.min.js"}
-
+<!--
+{combine_script id='overthrow-detect' require='jquery' path="themes/bootstrapdefault/js/overthrow-detect.js"}
+{combine_script id='overthrow-polyfill' require='jquery' path="themes/bootstrapdefault/js/overthrow-polyfill.js"}
+{combine_script id='overthrow-toss' require='jquery' path="themes/bootstrapdefault/js/overthrow-toss.js"}
+{combine_script id='overthrow-init' require='jquery' path="themes/bootstrapdefault/js/overthrow-init.js"}
+-->
 {combine_script id='share42' require='jquery' path="themes/bootstrapdefault/js/share42.js"}
+<!-- {combine_script id='lazy' require='jquery' path="themes/bootstrapdefault/js/jquery.lazy.min.js"}
+{combine_script id='lazy_plug' require='jquery' path="themes/bootstrapdefault/js/jquery.lazy.plugins.min.js"} -->
 
 {get_combined_scripts load='header'}
 
@@ -134,9 +141,10 @@
 
 </head>
 
-<body id="{$BODY_ID}">
+<body id="{$BODY_ID}"  >
 <!-- Share42 widget  -->
-    <div class="share42init" data-top1="160" data-top2="160" data-margin="0" data-url="http://images.tene.space" data-title="[tene.space.monkey] images from travel" data-image="http://images.tene.space/favicon/site_preview.jpg" data-description="BE THE CHANGE you wish to see in the world" data-path="http://images.tene.space/favicon/" data-zero-counter="0"></div> 
+    <div class="share42init" data-top1="80" data-top2="80" data-margin="0" data-url="http://images.tene.space" data-title="[tene.space.monkey] images from travel" data-image="http://images.tene.space/favicon/site_preview.jpg" data-description="BE THE CHANGE you wish to see in the world" data-path="http://images.tene.space/favicon/" data-zero-counter="0"></div> 
+
     <div id="the_page">
 {if $BODY_ID != 'thePicturePage' or $theme_config->picture_page == 'normal'}
         <!-- Bootstrap navbar, moved to the header as variables are missing in menubar.tpl, actual menus remain in menubar.tpl -->
@@ -149,7 +157,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="{$U_HOME}"><img src="/favicon/spacemonkey_logo_200.png" height="50" alt="monkey_logo" title="tene.space/monkey"> <span>{$GALLERY_TITLE}<span></a>
+                    <a class="navbar-brand" href="http://tene.space/monkey"><img src="/favicon/spacemonkey_logo_200.png" height="50" alt="monkey_logo" title="tene.space/monkey"> <span>{$GALLERY_TITLE}<span></a>
                 </div>
                 <div class="collapse navbar-collapse navbar-right" id="menubar-navbar-collapse">
 {$MENUBAR}

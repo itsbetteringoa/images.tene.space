@@ -251,7 +251,7 @@
 {if isset($COMMENT_IMG)}
         <h4 class="imageComment">{$COMMENT_IMG}</h4>
 {/if}
-<div style="float: left;">
+<div style="float: left; margin-left: 20px;">
 {if $display_info.visits}
         <div id="visits">
             <b>{'Visits'|@translate}</b>
@@ -348,7 +348,7 @@
 <a name="comments"></a>
 <div class="container">
     <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12" style="margin-left: 20px;">
 {$shortname = $theme_config->comments_disqus_shortname}
 {if $theme_config->comments_type == 'disqus' and !empty($shortname)}
                 <div id="disqus_thread"></div>

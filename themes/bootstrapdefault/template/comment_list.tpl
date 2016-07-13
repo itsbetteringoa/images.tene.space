@@ -31,7 +31,8 @@
             </a>
 {else}
 {include file="http_scheme.tpl"}
-            <img class="gravatar" src="//www.gravatar.com/avatar/{$comment.EMAIL|trim|strtolower|md5}?d={$http_scheme}://{$smarty.server.HTTP_HOST}/{$ROOT_URL}themes/bootstrapdefault/img/user.png" />
+
+            <img class="gravatar" src="//www.gravatar.com/avatar/{$comment.EMAIL|trim|strtolower|md5}?d=retro&f=y" />
 {/if}
         </div>
         <div class="description">
@@ -60,7 +61,7 @@
             </div>
             {/if}
 
-            <span>{if $comment.WEBSITE_URL}<a href="{$comment.WEBSITE_URL}" class="external" target="_blank" rel="nofollow">{$comment.AUTHOR}</a>{else}{$comment.AUTHOR}{/if}</span>
+            <span>{$comment.AUTHOR}</span>
                 {if isset($comment.EMAIL)}- <a href="mailto:{$comment.EMAIL}">{$comment.EMAIL}</a>{/if}
                 - <span class="commentDate">{$comment.DATE}</span>
             {if isset($comment.IN_EDIT)}

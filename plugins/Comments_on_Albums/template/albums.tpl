@@ -61,8 +61,7 @@ var coa_on_top = {intval(isset($COMMENTS_ON_TOP))}, coa_force_open = {intval(iss
           <p><label for="email">{'Email address'|translate}{if $comment_add.EMAIL_MANDATORY} ({'mandatory'|translate}){/if} :</label></p>
           <p><input type="text" name="email" id="email" value="{$comment_add.EMAIL}"></p>
         {/if}
-        <p><label for="website_url">{'Website'|translate} :</label></p>
-        <p><input type="text" name="website_url" id="website_url" value="{$comment_add.WEBSITE_URL}"></p>
+        
         <p><label for="contentid">{'Comment'|translate} ({'mandatory'|translate}) :</label></p>
         <p><textarea name="content" id="contentid" rows="5" cols="35">{$comment_add.CONTENT}</textarea></p>
         <p><input type="hidden" name="key" value="{$comment_add.KEY}">
@@ -86,7 +85,7 @@ var coa_on_top = {intval(isset($COMMENTS_ON_TOP))}, coa_force_open = {intval(iss
     </div>
     {/if}
     <div style="clear:both"></div>
-  </div>
+  </div> 
 
 </div>
 {/if}{*comments*}

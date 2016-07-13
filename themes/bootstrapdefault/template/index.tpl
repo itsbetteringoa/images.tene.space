@@ -127,7 +127,6 @@
 <div class="container {if isset($chronology_views)}calender_container{/if}">
 {if !empty($PLUGIN_INDEX_CONTENT_BEGIN)}{$PLUGIN_INDEX_CONTENT_BEGIN}{/if}
 
-
 {if isset($chronology_views)}
     <div class="calendarViews"><strong>{'View'|@translate}:</strong>
 <ul class="nav navbar-nav">
@@ -156,7 +155,7 @@
 
 {if !empty($CONTENT_DESCRIPTION)}
     <div class="bs-callout bs-callout-info">
-        {$CONTENT_DESCRIPTION|nl2br}
+        {$CONTENT_DESCRIPTION}
     </div>
 {/if}
     <div id="content" class="row {if $smarty.cookies.view == 'list'}content-list{else}content-grid{/if}">
@@ -220,9 +219,11 @@
 </div>
 {/if}
 
+{if !isset($chronology_calendar.calendar_bars[0].type)}
 <div class="container">
 {if !empty($PLUGIN_INDEX_CONTENT_END)}{$PLUGIN_INDEX_CONTENT_END}{/if}
 </div>
+{/if}
 
 {if !empty($PLUGIN_INDEX_CONTENT_AFTER)}{$PLUGIN_INDEX_CONTENT_AFTER}{/if}
 <!-- End of index.tpl -->

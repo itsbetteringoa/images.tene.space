@@ -1,0 +1,60 @@
+* Release 0.3.3, June 14 2015
+
+- Fix compatibility issues with PHP < 5.5 (?).
+- Harden against derivative creation failures.
+
+* Release 0.3.2, June 12 2015
+
+- Don't attempt to prefecth if there are no neighboring pictures.
+
+* Release 0.3.1, June 12 2015
+
+- Fix update path from pre-0.3 releases.
+
+* Release 0.3, June 12 2015
+
+- New configuration option: "Preload Square Thumbnails", defaulting to
+  true.  Disable it if your theme does not use square thumnails in its
+  navigation.
+
+- Enhanced integration with "Automatic Size" plugin.  Preload will now
+  always fetch the correct image, even when it's in a different aspect
+  ratio (and therefore a different automatic size) than the current
+  image.
+
+- Fixed problems with template giving warnings when "Debug Templates"
+  is turned on.
+
+
+* Release 0.2.1, June 11 2015
+
+- Re-release under GPLv2 or later terms.
+
+- Delay preloading until the full page is rendered.
+
+
+* Release 0.2, June 11 2015
+
+- Fixed French translation
+
+- Added US & UK English tranlation
+
+- Increased compatibility with other plugins.
+
+- The preload list is now provided as HTTP prefetch, but the images
+  are still force-loaded by javascript.
+
+- Prefetch images during slideshows (automatically disabled when using
+  Fotorama plugin).
+
+- Increased compatibility with the automatic_size plugin, will now
+  work correctly when the user has disabled the Automatic mode.
+
+- Improved js preloading snippet.
+
+- Code clean-ups, added GPLv3 license.
+
+
+* Release 0.1, June 10 2015
+
+- Initial release.

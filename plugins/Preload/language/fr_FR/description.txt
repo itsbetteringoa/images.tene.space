@@ -1,0 +1,1 @@
+Précharge les images avant et après l'image courante.

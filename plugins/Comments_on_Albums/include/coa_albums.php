@@ -286,6 +286,7 @@ SELECT
         'DATE' => trigger_change($row['date'], true),
         'CONTENT' => trigger_change('render_comment_content', $row['content'], 'album'),
         'WEBSITE_URL' => $row['website_url'],
+        'EMAIL' => $email
         );
 
       // rights

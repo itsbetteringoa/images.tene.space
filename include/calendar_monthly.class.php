@@ -275,15 +275,16 @@ class CalendarMonthly extends CalendarBase
 
       $nav_bar = $this->get_nav_bar_from_items( $chronology_date,
               $year_data['children'], false, false, $lang['month'] );
-
-      unset ( $page['chronology_date'][CDAY] );
       
+      unset ( $page['chronology_date'][CDAY] );
+
       $tpl_var['calendar_bars'][] =
         array(
           'U_HEAD'  => $url,
           'NB_IMAGES' => $year_data['nb_images'],
           'HEAD_LABEL' => $year,
-          'items' => $nav_bar
+          'items' => $nav_bar,
+          'type'=>'year'
         );
     }
 

@@ -1,0 +1,1 @@
+Preload next/previous images when in the photo view.

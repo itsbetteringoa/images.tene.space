@@ -2021,6 +2021,9 @@ function get_device()
  */
 function mobile_theme()
 {
+  
+  return false; 
+  
   global $conf;
 
   if (empty($conf['mobile_theme']))

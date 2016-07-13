@@ -1,7 +1,9 @@
 $(document).ready(function() {
     // Any plugin buttons using pwg-icon class should also use glyphicon class for correct display
     //$('.pwg-icon').addClass('glyphicon');
-
+    
+    $('.lazy').lazy()
+    
     // Grid view button click
     $('#btn-grid').click(function() {
         if ($(this).hasClass('active')) {
