@@ -159,6 +159,9 @@ table.fc-year-main-table.fc-border-separate a.fc-event {
       margin-bottom: 15px;
 
    }
+   .bs-callout {
+    font-size: 14px !important;
+   }
 <<<<<<< HEAD
    #theContactPage #content {
     overflow-y: scroll;

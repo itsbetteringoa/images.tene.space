@@ -4,6 +4,30 @@
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 <meta name="robots" content="noindex,nofollow" />
 <title>{$GALLERY_TITLE}</title>
+   <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon/favicon-194x194.png" sizes="194x194">
+<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/favicon/manifest.json">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/favicon/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="tene.space/monkey">
+<meta name="application-name" content="tene.space/monkey">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png">
+<meta name="msapplication-config" content="/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:image" content="http://images.tene.space/favicon/site_preview.jpg" />
 <link rel="stylesheet" href="{$OSM_PATH}fontello/css/osm.css" />
 <link rel="stylesheet" href="{$OSM_PATH}leaflet/leaflet.css" />
 <link rel="stylesheet" href="{$OSM_PATH}leaflet/leaflet-search.min.css" />
@@ -65,7 +89,16 @@ html, body {
 	<input type="text" value="" style="width: 550px;" onfocus="this.select();" id="textfield"></input>
 </div>
 
-<script type="text/javascript">{$OSMJS}</script>
+<script type="text/javascript">{$OSMJS}
+{literal}
+var group = new L.featureGroup(MarkerClusterList);
+this.map.whenReady(function () {
+        window.setTimeout(function () {
+                   map.fitBounds(group.getBounds(), {padding: [102,51]});
+        }.bind(this), 200);
+    }, this);
+{/literal}
+</script>
 
 <script type="text/javascript">
 {literal}
@@ -111,7 +144,7 @@ html, body {
 			autoType: false,
 		};
 
-	map.addControl( new L.Control.Search(searchOpts) );
+	//map.addControl( new L.Control.Search(searchOpts) );
 	/* END leaflet-search */
 
 	/* https://github.com/codeforamerica/lv-trucks-map/blob/master/js/main.js */
@@ -235,11 +268,12 @@ var provider_mapping = {
     'mapnikfr'       : 'OpenStreetMap_France',
     'mapnikde'       : 'OpenStreetMap_DE',
     'mapnikhot'      : 'OpenStreetMap_HOT',
-    'mapquest'       : 'MapQuestOpen_OSM',
-    'mapquestaerial' : 'MapQuestOpen_Aerial',
+    //'mapquest'       : 'MapQuestOpen_OSM',
+    //'mapquestaerial' : 'MapQuestOpen_Aerial',
     'cloudmade'      : 'CloudMade',
     'toner'          : 'Stamen_Toner',
     'custom'         : 'Custom',
+    'stamen'		 : 'Stamen_Watercolor'
 };
 
 var providers = {};
@@ -271,42 +305,42 @@ providers['OpenStreetMap_France'] = {
     })
 }
 
-providers['OpenStreetMap_DE'] = {
-    title: 'osm de',
-    icon: '{/literal}{$OSM_PATH}{literal}leaflet/icons/openstreetmap_de.png',
-    layer: L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
-        maxZoom: 18,
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    })
-}
+// providers['OpenStreetMap_DE'] = {
+//     title: 'osm de',
+//     icon: '{/literal}{$OSM_PATH}{literal}leaflet/icons/openstreetmap_de.png',
+//     layer: L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
+//         maxZoom: 18,
+//         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+//     })
+// }
 
-providers['OpenStreetMap_HOT'] = {
-    title: 'osm HOT',
-    icon: 'http://a.tile.openstreetmap.fr/hot/5/15/11.png',
-    layer: L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles courtesy of <a href="http://hot.openstreetmap.org/" target="_blank">Humanitarian OpenStreetMap Team</a>'
-    })
-}
+// providers['OpenStreetMap_HOT'] = {
+//     title: 'osm HOT',
+//     icon: 'http://a.tile.openstreetmap.fr/hot/5/15/11.png',
+//     layer: L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+//         maxZoom: 19,
+//         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles courtesy of <a href="http://hot.openstreetmap.org/" target="_blank">Humanitarian OpenStreetMap Team</a>'
+//     })
+// }
 
-providers['MapQuestOpen_OSM'] = {
-    title: 'MapQuest',
-    icon: 'http://otile1.mqcdn.com/tiles/1.0.0/map/5/15/11.png',
-    layer: L.tileLayer('http://otile{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: 'Tiles Courtesy of <a href="http://www.mapquest.com/">MapQuest</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-        subdomains: '1234'
-    })
-}
+// providers['MapQuestOpen_OSM'] = {
+//     title: 'MapQuest',
+//     icon: 'http://otile1.mqcdn.com/tiles/1.0.0/map/5/15/11.png',
+//     layer: L.tileLayer('http://otile{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
+//         maxZoom: 19,
+//         attribution: 'Tiles Courtesy of <a href="http://www.mapquest.com/">MapQuest</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+//         subdomains: '1234'
+//     })
+// }
 
-providers['MapQuestOpen_Aerial'] = {
-    title: 'MapQuest Aerial',
-    icon: 'http://otile1.mqcdn.com/tiles/1.0.0/sat/5/15/11.png',
-    layer: L.tileLayer('http://otile{s}.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png', {
-        attribution: 'Tiles Courtesy of <a href="http://www.mapquest.com/">MapQuest</a> &mdash; Portions Courtesy NASA/JPL-Caltech and U.S. Depart. of Agriculture, Farm Service Agency',
-        subdomains: '1234'
-    })
-}
+// providers['MapQuestOpen_Aerial'] = {
+//     title: 'MapQuest Aerial',
+//     icon: 'http://otile1.mqcdn.com/tiles/1.0.0/sat/5/15/11.png',
+//     layer: L.tileLayer('http://otile{s}.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png', {
+//         attribution: 'Tiles Courtesy of <a href="http://www.mapquest.com/">MapQuest</a> &mdash; Portions Courtesy NASA/JPL-Caltech and U.S. Depart. of Agriculture, Farm Service Agency',
+//         subdomains: '1234'
+//     })
+// }
 
 providers['Stamen_Toner'] = {
     title: 'toner',
@@ -317,6 +351,18 @@ providers['Stamen_Toner'] = {
         minZoom: 0,
         maxZoom: 20,
         ext: 'png'
+    })
+};
+
+providers['Stamen_Watercolor'] = {
+    title: 'watercolor',
+    icon: '{/literal}{$OSM_PATH}{literal}leaflet/icons/stamen_watercolor.jpg',
+    layer: L.tileLayer('http://tile.stamen.com/watercolor/{z}/{x}/{y}.jpg', {
+        attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+        subdomains: 'abcd',
+        minZoom: 0,
+        maxZoom: 20,
+        ext: 'jpg'
     })
 };
 
@@ -338,52 +384,52 @@ providers['Esri_OceanBasemap'] = {
     })
 };
 
-providers['HERE_normalDay'] = {
-    title: 'normalday',
-    icon: '{/literal}{$OSM_PATH}{literal}leaflet/icons/here_normalday.png',
-    layer: L.tileLayer('https://{s}.{base}.maps.cit.api.here.com/maptile/2.1/maptile/{mapID}/normal.day/{z}/{x}/{y}/256/png8?app_id={app_id}&app_code={app_code}', {
-        attribution: 'Map &copy; 1987-2014 <a href="http://developer.here.com">HERE</a>',
-        subdomains: '1234',
-        mapID: 'newest',
-        app_id: 'Y8m9dK2brESDPGJPdrvs',
-        app_code: 'dq2MYIvjAotR8tHvY8Q_Dg',
-        base: 'base',
-        maxZoom: 20
-    })
-};
+// providers['HERE_normalDay'] = {
+//     title: 'normalday',
+//     icon: '{/literal}{$OSM_PATH}{literal}leaflet/icons/here_normalday.png',
+//     layer: L.tileLayer('https://{s}.{base}.maps.cit.api.here.com/maptile/2.1/maptile/{mapID}/normal.day/{z}/{x}/{y}/256/png8?app_id={app_id}&app_code={app_code}', {
+//         attribution: 'Map &copy; 1987-2014 <a href="http://developer.here.com">HERE</a>',
+//         subdomains: '1234',
+//         mapID: 'newest',
+//         app_id: 'Y8m9dK2brESDPGJPdrvs',
+//         app_code: 'dq2MYIvjAotR8tHvY8Q_Dg',
+//         base: 'base',
+//         maxZoom: 20
+//     })
+// };
 
-providers['HERE_normalDayGrey'] = {
-    title: 'normalday grey',
-    icon: '{/literal}{$OSM_PATH}{literal}leaflet/icons/here_normaldaygrey.png',
-    layer: L.tileLayer('https://{s}.{base}.maps.cit.api.here.com/maptile/2.1/maptile/{mapID}/normal.day.grey/{z}/{x}/{y}/256/png8?app_id={app_id}&app_code={app_code}', {
-        attribution: 'Map &copy; 1987-2014 <a href="http://developer.here.com">HERE</a>',
-        subdomains: '1234',
-        mapID: 'newest',
-        app_id: 'Y8m9dK2brESDPGJPdrvs',
-        app_code: 'dq2MYIvjAotR8tHvY8Q_Dg',
-        base: 'base',
-        maxZoom: 20
-    })
-};
+// providers['HERE_normalDayGrey'] = {
+//     title: 'normalday grey',
+//     icon: '{/literal}{$OSM_PATH}{literal}leaflet/icons/here_normaldaygrey.png',
+//     layer: L.tileLayer('https://{s}.{base}.maps.cit.api.here.com/maptile/2.1/maptile/{mapID}/normal.day.grey/{z}/{x}/{y}/256/png8?app_id={app_id}&app_code={app_code}', {
+//         attribution: 'Map &copy; 1987-2014 <a href="http://developer.here.com">HERE</a>',
+//         subdomains: '1234',
+//         mapID: 'newest',
+//         app_id: 'Y8m9dK2brESDPGJPdrvs',
+//         app_code: 'dq2MYIvjAotR8tHvY8Q_Dg',
+//         base: 'base',
+//         maxZoom: 20
+//     })
+// };
 
-providers['HERE_satelliteDay'] = {
-    title: 'satellite',
-    icon: '{/literal}{$OSM_PATH}{literal}leaflet/icons/here_satelliteday.png',
-    layer: L.tileLayer('https://{s}.{base}.maps.cit.api.here.com/maptile/2.1/maptile/{mapID}/satellite.day/{z}/{x}/{y}/256/png8?app_id={app_id}&app_code={app_code}', {
-        attribution: 'Map &copy; 1987-2014 <a href="http://developer.here.com">HERE</a>',
-        subdomains: '1234',
-        mapID: 'newest',
-        app_id: 'Y8m9dK2brESDPGJPdrvs',
-        app_code: 'dq2MYIvjAotR8tHvY8Q_Dg',
-        base: 'aerial',
-        maxZoom: 20
-    })
-};
+// providers['HERE_satelliteDay'] = {
+//     title: 'satellite',
+//     icon: '{/literal}{$OSM_PATH}{literal}leaflet/icons/here_satelliteday.png',
+//     layer: L.tileLayer('https://{s}.{base}.maps.cit.api.here.com/maptile/2.1/maptile/{mapID}/satellite.day/{z}/{x}/{y}/256/png8?app_id={app_id}&app_code={app_code}', {
+//         attribution: 'Map &copy; 1987-2014 <a href="http://developer.here.com">HERE</a>',
+//         subdomains: '1234',
+//         mapID: 'newest',
+//         app_id: 'Y8m9dK2brESDPGJPdrvs',
+//         app_code: 'dq2MYIvjAotR8tHvY8Q_Dg',
+//         base: 'aerial',
+//         maxZoom: 20
+//     })
+// };
 
 providers['CartoDB_Positron'] = {
     title: 'positron',
     icon: '{/literal}{$OSM_PATH}{literal}leaflet/icons/cartodb_positron.png',
-    layer: L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+    layer: L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
         subdomains: 'abcd',
         maxZoom: 19

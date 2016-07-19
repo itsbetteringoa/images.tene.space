@@ -52,7 +52,7 @@ function osm_index_cat_thumbs_displayed()
 	$page['osm_cat_thumbs_displayed'] = true;
 }
 
-define('OSM_ACTION_MODEL', '<a href="%s" title="%s" rel="nofollow" class="pwg-state-default pwg-button"%s><span class="pwg-icon pwg-icon-globe">&nbsp;</span><span class="pwg-button-text">%s</span></a>');
+define('OSM_ACTION_MODEL', '<a href="%s" title="%s" rel="nofollow" class="pwg-state-default pwg-button"%s><span class="glyphicon glyphicon-globe">&nbsp;</span><span class="pwg-button-text">%s</span></a>');
 function osm_end_index()
 {
 	global $page, $filter, $template;
