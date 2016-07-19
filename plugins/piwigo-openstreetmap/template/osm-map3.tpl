@@ -38,7 +38,7 @@
 <link rel="stylesheet" href="{$OSM_PATH}leaflet/iconLayers.css" />
 <script src="{$OSM_PATH}leaflet/leaflet.js"></script>
 <script src="{$OSM_PATH}leaflet/leaflet-search.min.js"></script>
-<script src="{$OSM_PATH}leaflet/leaflet.markercluster.js"></script>
+<script src="{$OSM_PATH}leaflet/leaflet.markercluster-src.js"></script>
 <script src="{$OSM_PATH}leaflet/leaflet.contextmenu.js"></script>
 <script src="{$OSM_PATH}leaflet/leaflet-omnivore.min.js"></script>
 <script src="{$OSM_PATH}leaflet/Control.MiniMap.js"></script>
@@ -91,12 +91,18 @@ html, body {
 
 <script type="text/javascript">{$OSMJS}
 {literal}
-var group = new L.featureGroup(MarkerClusterList);
-this.map.whenReady(function () {
-        window.setTimeout(function () {
-                   map.fitBounds(group.getBounds(), {padding: [102,51]});
-        }.bind(this), 200);
-    }, this);
+
+
+ map.on('moveend', onMapMove);
+
+    function onMapMove(e){
+        getMarkers();
+    }
+
+    function getMarkers(){
+        var bounds = map.getBounds();
+    }
+
 {/literal}
 </script>
 
