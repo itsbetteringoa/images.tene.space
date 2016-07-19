@@ -22,19 +22,21 @@
 // +-----------------------------------------------------------------------+
 
 /*
-Plugin Name: Bootstrap Default Language Switch
-Version: 2.7.2.1
+Plugin Name: Language Switch
+Version: 2.8.2
 Description: Switch to another language from flags on your gallery home page.
-Plugin URI: http://piwigo.org/ext/extension_view.php?eid=797
-Author: Phil Bayfield (philb)
-Author URI: https://philio.me/
+Plugin URI: http://piwigo.org/ext/extension_view.php?eid=123
+Author: Piwigo team
+Author URI: http://piwigo.org
 */
 
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 
-define('BD_LANGUAGE_SWITCH_PATH', PHPWG_PLUGINS_PATH . basename(dirname(__FILE__)) . '/');
+define('LANGUAGE_SWITCH_PATH' , PHPWG_PLUGINS_PATH.basename(dirname(__FILE__)).'/');
 
-include_once(BD_LANGUAGE_SWITCH_PATH . 'language_switch.inc.php');
+include_once(LANGUAGE_SWITCH_PATH.'language_switch.inc.php');
 
-add_event_handler('loading_lang', 'bd_language_controler_switch', 5);
-add_event_handler('loc_end_index', 'bd_language_controler_flags', 95);
+add_event_handler('loading_lang', 'language_controler_switch', 5 );
+add_event_handler('loc_end_index', 'language_controler_flags', 95 );
+
+?>

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-07-19 06:31:55
+/* Smarty version 3.1.29, created on 2016-07-19 09:12:15
   from "/home/j/jakovlevz/test/public_html/subdomains/images/themes/bootstrapdefault/template/footer.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_578d9f2b3f47c5_95563396',
+  'unifunc' => 'content_578dc4bf354395_85221272',
   'file_dependency' => 
   array (
     '1e5ded44fb4823e4a232cfcc8cba8b8b82125ab3' => 
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_578d9f2b3f47c5_95563396 ($_smarty_tpl) {
+function content_578dc4bf354395_85221272 ($_smarty_tpl) {
 ?>
         <!-- Start of footer.tpl -->
         <div class="copyright container">

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-07-19 06:31:55
+/* Smarty version 3.1.29, created on 2016-07-19 09:12:15
   from "/home/j/jakovlevz/test/public_html/subdomains/images/themes/bootstrapdefault/template/index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_578d9f2b3202c0_84399809',
+  'unifunc' => 'content_578dc4bf167ab3_35737055',
   'file_dependency' => 
   array (
     '4f8a09f54621b1eded9c1542ee84b130b8dc7c85' => 
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:navigation_bar.tpl' => 2,
   ),
 ),false)) {
-function content_578d9f2b3202c0_84399809 ($_smarty_tpl) {
+function content_578dc4bf167ab3_35737055 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_regex_replace')) require_once '/home/j/jakovlevz/test/public_html/subdomains/images/include/smarty/libs/plugins/modifier.regex_replace.php';
 ?>
 <!-- Start of index.tpl -->
