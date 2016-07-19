@@ -467,7 +467,7 @@ $conf['template_combine_files'] = true;
 // this permit to show the php errors reporting (see INI 'error_reporting'
 // for possible values)
 // gives an empty value '' to deactivate
-$conf['show_php_errors'] = E_ALL;
+$conf['show_php_errors'] = '';
 
 
 // +-----------------------------------------------------------------------+

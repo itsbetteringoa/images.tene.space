@@ -1,0 +1,4 @@
+File automatically created from SVN or Git repository.
+
+URL: https://github.com/modus75/piwigo-gmaps 
+Revision: 2162e52fe86330eecd6d467c426d31c91de9d19c (Tue Jan 26 22:03:26 2016 +0100)

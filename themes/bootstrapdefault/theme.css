@@ -63,7 +63,11 @@
 }
 div#content {
   clear: both;
+<<<<<<< HEAD
   padding-left: 20px;  
+=======
+  padding-left: 20px;
+>>>>>>> 3286e3c66c4a2f754519d3b7df70e7f3e019da08
 }
 a.navbar-brand span {
     top: -5px;
@@ -155,9 +159,12 @@ table.fc-year-main-table.fc-border-separate a.fc-event {
       margin-bottom: 15px;
 
    }
+<<<<<<< HEAD
    #theContactPage #content {
     overflow-y: scroll;
    }
+=======
+>>>>>>> 3286e3c66c4a2f754519d3b7df70e7f3e019da08
    .calender_container #content {
     padding-left: 0px !important;
    }

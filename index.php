@@ -299,9 +299,10 @@ if ( empty($page['is_external']) or !$page['is_external'] )
   // category comment
   if ($page['start']==0 and !isset($page['chronology_field']) and !empty($page['comment']) )
   {
+    
     $str_br=nl2br($page['comment']);
     //var_dump(str_replace("<br />", "</p><p>", $str_br )); die();
-    $template->assign('CONTENT_DESCRIPTION', '<p>'.str_replace("<br />", "</p><p>", $str_br ).'</p>' );
+    $template->assign('CONTENT_DESCRIPTION', $page['comment']);//'<p>'.str_replace("<br />", "</p><p>", $str_br ).'</p>' );
   }
  
   if ( isset($page['category']['count_categories']) and $page['category']['count_categories']==0 )

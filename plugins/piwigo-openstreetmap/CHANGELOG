@@ -1,0 +1,96 @@
+Changes from v2.8.a to v2.8.b
+- Improve tag management from reverse geo address
+- Fix Undefined variable on photo admin page
+- Update Leaflet to version 0.7.7
+- Fix osm_places table on plugin install
+
+Changes from v2.7.c to v2.8.a
+- Add option to set the position of the map in category
+- Add search feature for BatchManager map
+- Add new option for BatchManager map height
+- Allow to create tag from reverse geo address
+- Allow to re-use location, places.
+- Improve worldmap v2 and v3
+- New worldmap v4
+- A lot of fix/improvements, thanks to the contributors
+- Update language, thanks to the contributors
+
+Changes from v2.7.b to v2.7.c
+- RE Add Batch manager mode support
+- Extend PWG support for GPX tracks file
+- Add a prefilter for GPX tracks on batch manager
+- Add/Integrate Map in batch manager
+- Add new config option for world map layout
+- Add new config options for GPX view
+- Update language, thanks to the contributors
+- Drop previous support for GPS tracks file
+
+Changes from v2.7.a to v2.7.b
+- Add new options for world map view
+- Unify code, Thanks to GnunuX
+- Add support for GPS tracks file, Thanks to GnunuX
+- Fix PHP error for special config
+
+Changes from v2.6.b to v2.7.a
+- Add custom pin marker support
+- Force usage of HTTPS for external URL and when possible for tiles #21
+- Add new options for world map view #40
+- Fix pictures without name #18 #23
+- Fix simple quote on title #20
+- Fix fontello with Firefox
+- Fix admin_photo_edit Click On Map
+- Update Leaflet to version 0.7.3
+- Update Leaflet plugins
+- Update language, thanks to the contributors
+
+Changes from v2.6a to v2.6.b
+- Fix Install method
+- Fix WorldMap URL
+
+Changes from v0.8 to v2.6a
+- Add New WorldMap style
+- Add 'Show All' feature
+- Add new map style (tiles)
+- Improve photo edit page
+- Update language, thanks to the contributors
+- Update Leaflet and plugin to version 0.7.1
+- Support for PWG2.6
+- Use PWG versioning
+
+Changes from v0.7 to v0.8
+- Add 'Point and click' feature for photo edit page
+- Add filter search for Tags/SmartAlbums
+- Fix broken resources with question_mark_in_urls set to false
+
+Changes from v0.6 to v0.7
+- Add new translation, thanks to the contributors
+- Add filter search for Album/Category
+- Improve admin sync logic, thanks to marjoleink
+- Fix issues
+
+Changes from v0.5 to v0.6
+- Improve install method
+- Update language
+- Update Leaflet and Leaflet.markercluster to version 0.6.2
+
+Changes from v0.4 to v0.5
+- Add Synchronize admin tab
+- Improve World map
+
+Changes from v0.3 to v0.4
+- Add new options
+- Add support for batch manager
+- Improve World map
+
+Changes from v0.2 to v0.3
+- Add new options
+- Improve World map
+- Improve documentation
+
+Changes from v0.1 to v0.2
+- Add new options
+- Improve World map layout
+
+Initial Release v0.1
+- Initial release
+- Initial documentation

@@ -75,7 +75,7 @@ my %ignore_keys = (
 
 
 foreach my $key (sort keys %registered_keys) {
-    if (not defined $used_keys{$key} and not defined $ignore_keys{$key}) {
+    if (not defined $used_keys{$key} ) {
         print "{".$key."}", ' is not used anywhere', "\n";
     }
 }
