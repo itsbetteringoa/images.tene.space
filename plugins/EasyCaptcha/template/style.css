@@ -1,0 +1,77 @@
+.theme {
+  display:inline-block;
+  position:relative;
+  width:66px;
+  height:66px;
+}
+  .theme .title {
+    display:block;
+    position:absolute;
+    top:-1em;
+    width:100%;
+    text-align:center;
+  }
+  .theme .count {
+    display:block;
+    position:absolute;
+    bottom:-1em;
+    width:100%;
+    text-align:center;
+    font-size:0.7em;
+  }
+  .theme img {
+    margin:1px;
+    padding:3px;
+    border:1px solid #999;
+    width:56px;
+    height:56px;
+  }
+  .theme.selected img {
+    border-color:#f70;
+  }
+
+.properties b {
+  display:inline-block;
+  min-width:200px;
+  text-align:right;
+  vertical-align:top;
+}
+
+.my-warnings {
+  background-image:none;
+  display:inline-block;
+  min-height:0;
+  padding:5px 5px 0 5px;
+  margin:0 5px 15px 5px;
+  font-weight:normal;
+  font-size:0.9em;
+}
+.my-warnings ul li {
+  list-style:none;
+}
+
+.chzn-choices li {
+  clear:none !important;
+}
+
+table.colors {
+  display:inline-block;
+  border-collapse:collapse;
+}
+  table.colors td, table.colors th {
+    padding:0 5px;
+    text-align:center;
+  }
+  table.colors td:nth-child(even), table.colors th:nth-child(even) {
+    background:rgba(127,127,127,0.2);
+  }
+
+
+.sp-palette-container {
+  max-width: 40px;
+}
+
+.preview {
+  display:none;
+  margin-left:200px;
+}

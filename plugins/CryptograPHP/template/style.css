@@ -1,0 +1,19 @@
+.button img {
+  margin:1px;
+  padding:3px;
+  border:1px solid #999;
+}
+.button.selected img {
+  border-color:#f70;
+}
+
+.properties b {
+  display:inline-block;
+  min-width:200px;
+  text-align:right;
+  vertical-align:top;
+}
+
+.chzn-choices li {
+  clear:none !important;
+}

@@ -62,7 +62,7 @@
             {/if}
 
             <span>{$comment.AUTHOR}</span>
-                {if isset($comment.EMAIL)}- <a href="mailto:{$comment.EMAIL}">{$comment.EMAIL}</a>{/if}
+                {if isset($comment.EMAIL)}- {$comment.EMAIL}{/if}
                 - <span class="commentDate">{$comment.DATE}</span>
             {if isset($comment.IN_EDIT)}
             <a name="edit_comment"></a>
